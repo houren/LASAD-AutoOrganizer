@@ -1,0 +1,1 @@
+This is just here so that when you run ant clean, the tomcat logs directory isn't empty.  Git doesn't upload empty directories.

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<maptemplate uniquename="toulmin_singleuser" ontology="Toulmin (Single user)" title="Toulmin Argumentation Scheme">
+					<mapdetails>
+						<description>
+							
+						</description>
+
+						<options maxuser="1" chatsystem="false" feedback="false" track-cursor="false" allowlinkstolinks="true"/>
+					</mapdetails>
+						
+				</maptemplate>

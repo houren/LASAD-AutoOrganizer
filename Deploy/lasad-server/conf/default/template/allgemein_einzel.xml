@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maptemplate uniquename="Allgemeine Argumentation (Einzelnutzer)"
+	ontology="Allgemeine Argumentation (Einzelnutzer)" title="Allgemeine Argumentation (Einzelnutzer)">
+	<mapdetails>
+		<description>
+			Studienbedingung 1a: Unterstützung für allgemeine Argumentation
+						</description>
+		<options maxuser="2" chatsystem="false" listofusers="false"
+			feedback="false" track-cursor="false" selection-details="false" allowlinkstolinks="true"/>
+	</mapdetails>
+
+</maptemplate>

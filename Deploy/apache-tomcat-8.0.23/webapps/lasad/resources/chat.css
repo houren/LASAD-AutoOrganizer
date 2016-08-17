@@ -1,0 +1,58 @@
+.chatChat-div {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 18px;
+	font-size: 11px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 5px;
+	background-color: #E1E9F2;
+	overflow: auto;
+	display: block;
+}
+
+.chatTextField-div {
+	position: absolute;
+	left: 1px;
+	right: 5px;
+	bottom: 1px;
+	height: 18px;
+}
+
+.chatTextField {
+	position: absolute;
+	border: 1px solid #000064;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	width: 100%;
+	bottom: 0px;
+}
+
+.chatChatMessageFrame {
+	position: relative;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	overflow: visible;
+	display: block;
+	clear: both;
+}
+
+.chatChatNickName {
+	float: left;
+	font-size: 11px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-weight: bold;
+	min-width: 60px;
+}
+
+.chatChatText-div {
+	float: left;
+}
+
+.chatChatText {
+	font-size: 11px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+}

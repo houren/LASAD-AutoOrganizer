@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This example is by no means complete! -->
+<tutor_related_message_sequence
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='http://learnlab.web.cmu.edu/dtd/tutor_message_v4.xsd'
+    version_number="4" >
+
+	<context_message 
+		context_message_id="0CEF2E07-24DE-BFDA-9BAB-957C3AE236CE" 
+		name="START_PROBLEM">
+		<meta>
+			<user_id>Joe Chemistry</user_id>
+			<session_id>43075c2c80020c66011ea3025ff798a1</session_id>
+			<time>2005-28-9 01:00:00</time>
+			<time_zone>EST</time_zone>
+		</meta>
+		<class>
+			<school>CMU</school>
+		</class>
+		<dataset>
+			<name>Chemistry</name>
+			<level type="Module">
+				<name>Stoichiometry</name>
+				<level type="Section">
+					<name>Unit Conversion</name>
+					<problem>
+						<name>ChemPT1</name>
+						<context>How many moles?</context>
+
+					</problem>
+				</level>
+			</level>
+		</dataset>
+		<condition>
+			<name>Personal</name>
+			<type>Experimental</type>
+		</condition>
+		<condition>
+			<name>Worked</name>
+			<type>Experimental</type>
+		</condition>
+	</context_message>
+
+	<tool_message context_message_id="0CEF2E07-24DE-BFDA-9BAB-957C3AE236CE">
+		<meta>
+			<user_id>Joe Chemistry</user_id>
+			<session_id>43075c2c80020c66011ea3025ff798a1</session_id>
+			<time>2005-28-9 01:00:01</time>
+			<time_zone>EST</time_zone>
+		</meta>
+		<semantic_event transaction_id="B7AE5D-B8B9-3AAA-0B01-26CAA3302205" name="ATTEMPT"/>
+		<event_descriptor>
+			<selection>Numerator1Value</selection>
+			<action>UpdateTextField</action>
+			<input>1000</input>
+		</event_descriptor>
+	</tool_message>
+	<tutor_message context_message_id="0CEF2E07-24DE-BFDA-9BAB-957C3AE236CE">
+		<meta>
+			<user_id>Joe Chemistry</user_id>
+			<session_id>43075c2c80020c66011ea3025ff798a1</session_id>
+			<time>2005-28-9 01:00:02</time>
+			<time_zone>EST</time_zone>
+		</meta>
+		<semantic_event transaction_id="B7AE5D-B8B9-3AAA-0B01-26CAA3302205" name="RESULT"/>
+		<event_descriptor>
+			<selection>Numerator1Value</selection>
+			<action>UpdateTextField</action>
+			<input>1000</input>
+		</event_descriptor>
+		<action_evaluation>INCORRECT</action_evaluation>
+		<tutor_advice>"1000" should be in this term's ratio, but look at the units you need to cancel in the first term.  
+		Will placing 1000 mg in the numerator cancel in the first term?</tutor_advice>
+		<skill><name>Set-Numerator-Unit-of-Unit-Conversion</name><category>Chemistry-Skills</category></skill>
+	</tutor_message>
+	<tool_message context_message_id="0CEF2E07-24DE-BFDA-9BAB-957C3AE236CE">
+		<meta>
+			<user_id>Joe Chemistry</user_id>
+			<session_id>43075c2c80020c66011ea3025ff798a1</session_id>
+			<time>2005-28-9 01:00:03</time>
+			<time_zone>EST</time_zone>
+		</meta>
+		<semantic_event transaction_id="BF61B95-3477-0D20-1E8B-2F4A2FAC5FE0" name="HINT_REQUEST"/>
+		<event_descriptor>
+			<selection>hint_button</selection>
+			<action>ButtonPressed</action>
+		</event_descriptor>
+	</tool_message>
+	<tutor_message context_message_id="0CEF2E07-24DE-BFDA-9BAB-957C3AE236CE">
+		<meta>
+			<user_id>Joe Chemistry</user_id>
+			<session_id>43075c2c80020c66011ea3025ff798a1</session_id>
+			<time>2005-28-9 01:00:04</time>
+			<time_zone>EST</time_zone>
+		</meta>
+		<semantic_event transaction_id="BF61B95-3477-0D20-1E8B-2F4A2FAC5FE0" name="HINT_MSG"/>
+		<event_descriptor>
+			<selection>Numerator1Value</selection>
+			<action>UpdateTextField</action>
+			<input>1</input>
+		</event_descriptor>
+		<action_evaluation current_hint_number="1" total_hints_available="3">HINT</action_evaluation>
+		<tutor_advice>Your goal here is to convert the units of the first term.</tutor_advice>
+		<skill><name>Set-Numerator-Unit-of-Unit-Conversion</name><category>Chemistry-Skills</category></skill>
+	</tutor_message>
+</tutor_related_message_sequence>

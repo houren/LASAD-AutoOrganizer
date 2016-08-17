@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+
+	<!-- Servlets -->
+
+	<servlet>
+		<servlet-name>LASADServletService</servlet-name>
+		<servlet-class>lasad.gwt.server.LASADServletServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LASADServletService</servlet-name>
+		<url-pattern>/lasad_client/LASADAction</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PushServlet</servlet-name>
+		<servlet-class>lasad.gwt.server.PushServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>PushServlet</servlet-name>
+		<url-pattern>/lasad_client/PushServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>fileUploaderServlet</servlet-name>
+		<servlet-class>lasad.gwt.server.FileUploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>fileUploaderServlet</servlet-name>
+		<url-pattern>/lasad_client/fileupload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>saveToXmlServlet</servlet-name>
+		<servlet-class>lasad.gwt.server.SaveToXmlServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>saveToXmlServlet</servlet-name>
+		<url-pattern>/lasad_client/saveToXmlServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>eventServiceImpl</servlet-name>
+		<servlet-class>de.novanic.eventservice.service.EventServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>eventServiceImpl</servlet-name>
+		<url-pattern>/lasad_client/gwteventservice</url-pattern>
+	</servlet-mapping>
+
+	<!-- W A R N I N G The following two entries cause an error in tomcat version 
+		7.0.37 and later! They have been removed by Kevin Loughlin for recent versions 
+		of LASAD, as of 4 June 2015. <servlet> <servlet-name>EventService</servlet-name> 
+		<servlet-class>lasad.gwt.server.LASADEventServiceImpl</servlet-class> </servlet> 
+		<servlet-mapping> <servlet-name>EventService</servlet-name> <url-pattern>/lasad_client/gwteventservice</url-pattern> 
+		</servlet-mapping> End of entries with error -->
+
+	<servlet>
+		<servlet-name>ImageUpload</servlet-name>
+		<servlet-class>lasad.gwt.server.ImageUploadServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ImageUpload</servlet-name>
+		<url-pattern>/lasad_client/ImageUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ScreenShot</servlet-name>
+		<servlet-class>lasad.gwt.server.ScreenShotServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ScreenShot</servlet-name>
+		<url-pattern>/lasad_client/ScreenShot</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ScreenShotMerge</servlet-name>
+		<servlet-class>lasad.gwt.server.ScreenShotMergeServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>ScreenShotMerge</servlet-name>
+		<url-pattern>/lasad_client/ScreenShotMerge</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>LASAD_Client.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

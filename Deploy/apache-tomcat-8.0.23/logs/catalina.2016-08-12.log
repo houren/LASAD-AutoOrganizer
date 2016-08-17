@@ -1,0 +1,49 @@
+12-Aug-2016 16:24:57.022 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.23
+12-Aug-2016 16:24:57.023 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 19 2015 14:58:38 UTC
+12-Aug-2016 16:24:57.023 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.23.0
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Mac OS X
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.11
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_65-b17
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+12-Aug-2016 16:24:57.024 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23
+12-Aug-2016 16:24:57.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23
+12-Aug-2016 16:24:57.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/conf/logging.properties
+12-Aug-2016 16:24:57.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+12-Aug-2016 16:24:57.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=/Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/endorsed
+12-Aug-2016 16:24:57.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23
+12-Aug-2016 16:24:57.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23
+12-Aug-2016 16:24:57.026 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/temp
+12-Aug-2016 16:24:57.026 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/judy/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+12-Aug-2016 16:24:57.199 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8099"]
+12-Aug-2016 16:24:57.268 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+12-Aug-2016 16:24:57.273 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+12-Aug-2016 16:24:57.276 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+12-Aug-2016 16:24:57.277 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 734 ms
+12-Aug-2016 16:24:57.327 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+12-Aug-2016 16:24:57.327 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.23
+12-Aug-2016 16:24:57.378 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/lasad.war
+12-Aug-2016 16:25:00.580 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+12-Aug-2016 16:25:00.670 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/lasad.war has finished in 3,291 ms
+12-Aug-2016 16:25:00.671 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/docs
+12-Aug-2016 16:25:00.691 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/docs has finished in 20 ms
+12-Aug-2016 16:25:00.691 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/examples
+12-Aug-2016 16:25:01.292 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/examples has finished in 600 ms
+12-Aug-2016 16:25:01.292 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/host-manager
+12-Aug-2016 16:25:01.345 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/host-manager has finished in 53 ms
+12-Aug-2016 16:25:01.346 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/manager
+12-Aug-2016 16:25:01.381 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/manager has finished in 35 ms
+12-Aug-2016 16:25:01.381 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/ROOT
+12-Aug-2016 16:25:01.432 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/apache-tomcat-8.0.23/webapps/ROOT has finished in 51 ms
+12-Aug-2016 16:25:01.437 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8099"]
+12-Aug-2016 16:25:01.445 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+12-Aug-2016 16:25:01.447 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 4169 ms
+12-Aug-2016 16:35:30.693 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+12-Aug-2016 16:35:30.696 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8099"]
+12-Aug-2016 16:35:30.756 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+12-Aug-2016 16:35:30.809 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+12-Aug-2016 16:35:30.880 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8099"]
+12-Aug-2016 16:35:30.884 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+12-Aug-2016 16:35:30.885 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8099"]
+12-Aug-2016 16:35:30.886 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

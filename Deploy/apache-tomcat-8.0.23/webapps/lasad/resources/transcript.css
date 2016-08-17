@@ -1,0 +1,194 @@
+.trans-grid-0 {
+	cursor: pointer;
+	padding: 0px;
+	margin: 0px;
+	line-height: 21px;
+	font-size: 12px;
+}
+
+.trans-grid-1 {
+	background-color: #E1E9F2;
+	cursor: pointer;
+	padding: 0px;
+	margin: 0px;
+	line-height: 21px;
+	font-size: 12px;
+}
+
+.trans-grid-lineCell {
+	width: 30px;
+	padding: 0px;
+	padding-right: 5px;
+	vertical-align: top;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: rgb(187, 187, 187);
+	color: rgb(127, 127, 127);
+	margin: 0px;
+	text-align: right;
+}
+
+.trans-grid-textCell {
+	color: black;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+
+.trans-span {
+	cursor: text !important;
+	border: 0px;
+	border-spacing: 2px;
+	vertical-align: middle;
+	font-size: 12px;
+}
+
+.trans-background {
+	background-image: url(images/transcript/textPassageBackground.png)
+		!important;
+}
+
+.trans-highlight {
+	border-style: solid !important;
+	color: black;
+	padding: 0px;
+	cursor: pointer !important;
+}
+
+.trans-highlight-middle {
+	border-width: 1px !important;
+	border-left-width: 0px !important;
+	border-right-width: 0px !important;
+}
+
+.trans-highlight-start-end {
+	border-width: 1px !important;
+}
+
+.trans-highlight-start {
+	border-width: 1px !important;
+	border-right-width: 0px !important;
+}
+
+.trans-highlight-end {
+	border-width: 1px !important;
+	border-left-width: 0px !important;
+}
+
+.trans-highlight-active {
+	border-top: solid 1px black !important;
+	border-bottom: solid 1px black !important;
+}
+
+.trans-highlight-active-start-end {
+	border: solid 1px black !important;
+}
+
+.trans-highlight-active-start {
+	border-left: solid 1px black !important;
+	border-top: solid 1px black !important;
+	border-bottom: solid 1px black !important;
+}
+
+.trans-highlight-active-end {
+	border-right: solid 1px black !important;
+	border-top: solid 1px black !important;
+	border-bottom: solid 1px black !important;
+}
+
+.trans-highlight-inner-active {
+	border-top: solid 1px black !important;
+	border-bottom: solid 1px black !important;
+}
+
+.trans-highlight-inner-active-start-end {
+	border: dashed 1px black !important;
+	border-top: solid 1px black !important;
+	border-bottom: solid 1px black !important;
+}
+
+.trans-highlight-inner-active-start {
+	border-left: dashed 1px black !important;
+	border-top: solid 1px black !important;
+	border-bottom: solid 1px black !important;
+}
+
+.trans-highlight-inner-active-end {
+	border-right: dashed 1px black !important;
+	border-bottom: solid 1px black !important;
+	border-top: solid 1px black !important;
+}
+
+.trans-highlight-selection {
+	border: solid 1px #000080;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	background-color: #000080;
+	background-image: none !important;
+	color: white;
+	padding: 0px;
+	cursor: pointer !important;
+}
+
+.trans-highlight-selection-start-end {
+	border: solid 1px #000080;
+	background-color: #000080;
+	background-image: none !important;
+	color: white;
+	padding: 0px;
+	cursor: pointer !important;
+}
+
+.trans-highlight-selection-start {
+	border: solid 1px #000080;
+	border-right-width: 0px;
+	background-color: #000080;
+	background-image: none !important;
+	color: white;
+	padding: 0px;
+	cursor: pointer !important;
+}
+
+.trans-highlight-selection-end {
+	border: solid 1px #000080;
+	border-left-width: 0px;
+	background-color: #000080;
+	background-image: none !important;
+	color: white;
+	padding: 0px;
+	cursor: pointer !important;
+}
+
+.transcript-popup {
+	background-color: transparent;
+	border: 1px #999999 solid;
+}
+
+.transcript-popup-title {
+	color: black;
+	font-size: 9px;
+	background-color: transparent;
+	border-width: 0px;
+}
+
+.transcript-popup-span {
+	background-image: url(images/transcript/textPassageBackgroundSmall.png)
+		!important;
+	line-height: 16px;
+	font-size: 9px;
+	border-style: solid !important;
+	border-width: 1px;
+	color: white;
+	padding: 0px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.transcript-popup-span-small {
+	line-height: 14px;
+	font-size: 9px;
+	color: black;
+	padding: 0px;
+}

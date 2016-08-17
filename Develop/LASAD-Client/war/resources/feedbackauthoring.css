@@ -1,0 +1,237 @@
+/*
+*Start of 
+*code to align tabs to the right
+*/
+.faSubTab ul.x-tab-strip {
+	width: auto;
+}
+
+.faSubTab ul.x-tab-strip li {
+	float: right;
+	margin-right: 2px;
+}
+/*
+*End
+*/
+/*
+*Start of 
+*code to make the tabs transparent
+*/
+.faSubTab .x-tab-strip-top .x-tab-right {
+	background-image: url(images/feedbackauthoring/tabs/fa-tabs-sprite4.gif);
+}
+
+.faSubTab .x-tab-strip-top .x-tab-left {
+	background-image: url(images/feedbackauthoring/tabs/fa-tabs-sprite4.gif);
+}
+
+.faSubTab .x-tab-strip-top .x-tab-strip-inner {
+	background-image: url(images/feedbackauthoring/tabs/fa-tabs-sprite4.gif);
+}
+/*
+*End
+*/
+.faSubTab  ul.x-tab-strip-top {
+	background: #fff url(images/feedbackauthoring/tabs/fa-tab-strip-bg.gif)
+		repeat-x left top;
+	border-color: #fff;
+	padding-top: 2px;
+}
+
+.faSubTab .x-tab-panel-header, .x-tab-panel-footer {
+	background: #fff;
+	border-color: #fff;
+}
+
+.faSubTab .x-tab-panel-header {
+	border-color: #fff;
+}
+
+.faSubTab .x-tab-panel-footer {
+	border-color: #fff;
+}
+
+.faSubTab .x-tab-panel-body {
+	border-color: #fff; /*removes a thin line that works as a frame*/
+	background: #fff;
+}
+
+.faSubTab .x-tab-panel-bbar .x-toolbar {
+	border-color: #fff; /*not important*/
+}
+
+.faSubTab .x-tab-panel-tbar .x-toolbar {
+	border-color: #fff; /*not important*/
+}
+
+/*
+*Start of 
+*code to make the text of the selected tab black
+*/
+.faSubTab .x-tab-strip-active span.x-tab-strip-text {
+	color: #000;
+}
+/*
+*End
+*/
+/*
+*Start of 
+*code to make the buttons white
+*/
+.xfa-btn button {
+	color: transparent !important;
+	background: transparent !important;
+	border-style: none none none none;
+	height: 16px !important;
+	width: 16px !important;
+	background-image: url(images/feedbackauthoring/btnTrans.gif) !important;
+}
+
+.xfa-btn-over button {
+	color: transparent !important;
+}
+
+.xfa-btn-focus button {
+	color: transparent !important;
+}
+
+.xfa-btn .x-btn-tl, .xfa-btn .x-btn-tr, .xfa-btn .x-btn-tc, .xfa-btn .x-btn-ml,
+	.xfa-btn .x-btn-mr, .xfa-btn .x-btn-mc, .xfa-btn .x-btn-bl, .xfa-btn .x-btn-br,
+	.xfa-btn .x-btn-bc {
+	background-image: url(images/feedbackauthoring/btnTrans.gif) !important;
+}
+
+.xfa-btn .x-btn-ml, .xfa-btn .x-btn-mc, .xfa-btn .x-btn-mr {
+	/*height: 20px !important;*/
+	
+}
+
+.xfa-btn .x-btn-mc, .xfa-btn .x-btn-tc, .xfa-btn .x-btn-bc {
+	/*width: 20px !important;*/
+	
+}
+
+body-trans {
+	color: black !important;
+	background-color: black !important;
+}
+
+my_style {
+	background-color: yellow;
+}
+/*
+*End
+*/
+/*
+*Start of 
+*code to create the icons for the buttons
+*/
+.icon-view {
+	background-image: url(images/feedbackauthoring/view.png) !important;
+}
+
+.icon-delete-circle {
+	background-image: url(images/feedbackauthoring/minuscircle.png)
+		!important;
+}
+
+.icon-plus-circle {
+	background-image: url(images/feedbackauthoring/pluscircle.png)
+		!important;
+}
+
+.icon-edit-gear {
+	background-image: url(images/feedbackauthoring/gear.png) !important;
+}
+
+.icon-switch-direction {
+	background-image: url(images/feedbackauthoring/switch_direction.png)
+		!important;
+}
+
+.icon-play {
+	background-image: url(images/feedbackauthoring/play.png) !important;
+}
+
+.icon-stop {
+	background-image: url(images/feedbackauthoring/stop.png) !important;
+}
+
+.icon-duplicate {
+	background-image: url(images/feedbackauthoring/duplicate.png) !important;
+}
+
+.icon-question {
+	background-image: url(images/feedbackauthoring/question.png) !important;
+}
+
+.icon-compile-gray {
+	background-image: url(images/feedbackauthoring/compilegray.png)
+		!important;
+}
+
+.icon-compile-green {
+	background-image: url(images/feedbackauthoring/compilegreen.png)
+		!important;
+}
+
+.icon-compile-red {
+	background-image: url(images/feedbackauthoring/compilered.png)
+		!important;
+}
+
+.icon-delete-restriction {
+	background-image: url(images/feedbackauthoring/delete-restriction.png)
+		!important;
+}
+
+.icon-add-restriction {
+	background-image: url(images/feedbackauthoring/add-restriction.png)
+		!important;
+}
+
+.icon-config-restriction {
+	background-image: url(images/feedbackauthoring/config-restriction.png)
+		!important;
+}
+
+.icon-view-gray {
+	background-image: url(images/feedbackauthoring/view-gray.png) !important;
+}
+
+.icon-delete-circle-gray {
+	background-image: url(images/feedbackauthoring/minuscircle-gray.png)
+		!important;
+}
+
+.icon-plus-circle-gray {
+	background-image: url(images/feedbackauthoring/pluscircle-gray.png)
+		!important;
+}
+
+.icon-edit-gear-gray {
+	background-image: url(images/feedbackauthoring/gear-gray.png) !important;
+}
+
+.icon-duplicate-gray {
+	background-image: url(images/feedbackauthoring/duplicate-gray.png)
+		!important;
+}
+
+.button-delete-circle {
+	background-image: url(images/feedbackauthoring/minus_gray_button.gif)
+		!important;
+}
+
+.text-black {
+	color: black !important;
+}
+
+.text-black-center {
+	color: black !important;
+	text-align: center !important;
+}
+
+/*
+*End
+*/

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="all" name="LASAD">
+
+	<!-- Configure path to GWT SDK -->
+	<property name="GWT_HOME" value="gwt-2.5.1" />
+
+	<!-- Configure path to Tomcat -->
+	<property name="TOMCAT" value="../Deploy/apache-tomcat-8.0.23" />
+
+	<property name="gwt.sdk" location="${GWT_HOME}/" />
+
+	<!-- Configure path to DataShop Logging Library -->
+	<property name="DATASHOP" value="DS_logging" />
+
+	<target name="all" depends="server-jar,client-war" />
+	<target name="compile" depends="compile-server,compile-client" />
+
+	<!-- Target Java Version MUST be the version running on your server, and 
+		you MUST be running that version on your compilation computer -->
+	<property name="target.java.version" value="1.8" />
+
+	<target name="compile-shared" description="Compiles the shared source">
+		<mkdir dir="LASAD-Shared/bin" />
+		<javac destdir="LASAD-Shared/bin" srcdir="LASAD-Shared/src"
+			source="${target.java.version}" target="${target.java.version}"
+			includeantruntime="false">
+			<!-- If you want to see lines causing compiler warnings. The code runs 
+				fine though. <compilerarg value="-Xlint:deprecation"/> <compilerarg value="-Xlint:unchecked" 
+				/> End of "see compiler warning lines" -->
+		</javac>
+	</target>
+	<target name="compile-server" description="Compiles the server source"
+		depends="compile-shared">
+		<mkdir dir="LASAD-Server/bin" />
+		<javac destdir="LASAD-Server/bin" srcdir="LASAD-Server/src"
+			classpath="LASAD-Shared/bin" source="${target.java.version}"
+			target="${target.java.version}" includeantruntime="false">
+			<!-- If you want to see lines causing compiler warnings. The code runs 
+				fine though. <compilerarg value="-Xlint:deprecation"/> <compilerarg value="-Xlint:unchecked" 
+				/> End of "see compiler warning lines" -->
+			<classpath>
+				<pathelement location="LASAD-Server/lib/jdom.jar" />
+				<pathelement location="LASAD-Server/lib/xmppbridge.jar" />
+				<pathelement location="${DATASHOP}/dist/datashop-logging.jar" />
+				<pathelement location="${DATASHOP}/extlib/logclient.jar" />
+				<pathelement location="${DATASHOP}/extlib/commons-lang-2.2.jar" />
+				<pathelement location="${DATASHOP}/extlib/log4j-1.2.13.jar" />
+			</classpath>
+		</javac>
+	</target>
+	<path id="client.class.path">
+		<pathelement location="LASAD-Client/src" />
+		<pathelement location="LASAD-Shared/src" />
+		<pathelement location="LASAD-Shared/bin" />
+		<pathelement location="LASAD-Client/war/WEB-INF/lib/jdom.jar" />
+		<pathelement location="LASAD-Client/war/WEB-INF/lib/commons-fileupload-1.2.1.jar" />
+		<pathelement location="LASAD-Client/war/WEB-INF/lib/eventservice-1.2.1-SNAPSHOT.jar" />
+		<pathelement location="LASAD-Client/war/WEB-INF/lib/eventservice-rpc-1.2.1-SNAPSHOT.jar" />
+		<pathelement location="LASAD-Client/war/WEB-INF/lib/gwt-servlet.jar" />
+		<pathelement location="LASAD-Client/lib/gwteventservice-1.2.1-SNAPSHOT.jar" />
+		<pathelement location="LASAD-Client/lib/gxt-2.2.4-gwt22.jar" />
+		<pathelement location="LASAD-Client/lib/Rocket-TextSelection-Hack-0_56.jar" />
+		<!-- GWT SDK -->
+		<pathelement location="${GWT_HOME}/gwt-user.jar" />
+		<pathelement location="${GWT_HOME}/gwt-dev.jar" />
+		<pathelement location="${GWT_HOME}/validation-api-1.0.0.GA-sources.jar" />
+		<pathelement location="${GWT_HOME}/validation-api-1.0.0.GA.jar" />
+	</path>
+	<target name="compile-client" description="Compiles the client source"
+		depends="compile-shared">
+		<mkdir dir="LASAD-Client/war/WEB-INF/classes" />
+		<javac destdir="LASAD-Client/war/WEB-INF/classes" srcdir="LASAD-Client/src"
+			source="${target.java.version}" target="${target.java.version}"
+			includeantruntime="false">
+			<!-- If you want to see lines causing compiler warnings. The code runs 
+				fine though. <compilerarg value="-Xlint:deprecation"/> <compilerarg value="-Xlint:unchecked" 
+				/> End of "see compiler warning lines" -->
+			<classpath>
+				<path refid="client.class.path" />
+			</classpath>
+		</javac>
+	</target>
+	<target name="server-jar" depends="compile-shared,compile-server">
+
+		<!-- Kevin Loughlin changed jar production location -->
+		<jar destfile="../Deploy/lasad-server/LASAD-Server.jar"
+			filesetmanifest="mergewithoutmain">
+
+			<manifest>
+				<attribute name="Main-Class" value="lasad.Server" />
+			</manifest>
+			<fileset dir="LASAD-Server/bin" />
+			<zipfileset excludes="META-INF/*.SF" src="LASAD-Server/lib/jdom.jar" />
+			<zipfileset excludes="META-INF/*.SF"
+				src="LASAD-Server/lib/mysql-connector-java-5.1.14-bin.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="LASAD-Server/lib/xmppbridge.jar" />
+			<zipfileset excludes="META-INF/*.SF"
+				src="${DATASHOP}/dist/datashop-logging.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="${DATASHOP}/extlib/logclient.jar" />
+			<zipfileset excludes="META-INF/*.SF"
+				src="${DATASHOP}/extlib/commons-lang-2.2.jar" />
+			<zipfileset excludes="META-INF/*.SF" src="${DATASHOP}/extlib/log4j-1.2.13.jar" />
+			<fileset dir="LASAD-Shared/bin" />
+		</jar>
+	</target>
+	<target name="gwtc" description="GWT compile to JavaScript (production mode)">
+		<java failonerror="true" fork="true" classname="com.google.gwt.dev.Compiler">
+			<classpath>
+				<path refid="client.class.path" />
+			</classpath>
+			<!-- add jvmarg -Xss16M or similar if you see a StackOverflowError -->
+			<jvmarg value="-Xmx512M" />
+			<arg line="-war" />
+			<arg value="LASAD-Client/war" />
+			<!-- Additional arguments like -style PRETTY or -logLevel DEBUG -->
+			<!--<arg line="${gwt.args}"/> -->
+			<arg value="lasad.gwt.LASAD_Client" />
+		</java>
+	</target>
+	<target name="client-war" depends="compile-shared,compile-client,gwtc">
+		<available file="LASAD-Client/war/lasad_client/lasad_client.nocache.js"
+			property="gwt_compiled" />
+		<fail unless="gwt_compiled">GWT must be compiled first!</fail>
+
+		<!-- If you run "ant clean" before compiling, this delete step isn't necessary, 
+			but I included it so that when you launch a compiled version of LASAD, Tomcat 
+			is guaranteed to deploy the most recently compiled version -->
+		<delete dir="${TOMCAT}/webapps/lasad" />
+		<zip destfile="${TOMCAT}/webapps/lasad.war">
+
+			<zipfileset dir="LASAD-Shared/bin" prefix="WEB-INF/classes/" />
+			<zipfileset dir="LASAD-Client/war" />
+			<zipfileset dir="LASAD-Client/src/" includes="eventservice.properties"
+				prefix="WEB-INF/classes/" />
+			<zipfileset dir="LASAD-Client/src/" includes="META-INF" prefix="WEB-INF/classes/" />
+		</zip>
+	</target>
+
+	<!-- Added by Kevin Loughlin on 4 June 2015 for permitting easy recompile -->
+	<!-- Remember to enter "ant clean" before attempting to recompile -->
+	<target name="clean">
+		<delete dir="LASAD-Shared/bin" />
+		<delete dir="LASAD-Server/bin" />
+		<delete dir="LASAD-Client/war/WEB-INF/classes" />
+		<delete dir="LASAD-Client/war/WEB-INF/deploy" />
+		<delete dir="LASAD-Client/war/lasad_client" />
+		<delete dir="LASAD-Client/gwt-unitCache" />
+		<delete dir="${TOMCAT}/webapps/lasad" />
+        <delete file="${TOMCAT}/webapps/lasad.war" />
+        <delete file="../Deploy/lasad-server/LASAD-Server.jar" />
+		<delete file="../Deploy/lasad-server/server.log" />
+		<delete file="../Deploy/lasad-server/log/debug.log" />
+		<delete includeEmptyDirs="true">
+			<fileset dir="${TOMCAT}/logs" includes="**/*" excludes="DO_NOT_DELETE.txt"/>
+		</delete>
+	</target>
+	<!-- End of content added by Kevin Loughlin -->
+</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <maptemplate uniquename="Allgemeine Argumentation (Gruppennutzung)" ontology="Allgemeine Argumentation (Gruppennutzung)" title="Allgemeine Argumentation (Gruppennutzung)">
+					<mapdetails>
+						<description>
+							Studienbedingung 1b: Unterstützung für allgemeine Argumentation in Gruppen
+						</description>
+						<options maxuser="4" chatsystem="true" listofusers="true" feedback="false" track-cursor="true" allowlinkstolinks="true"/>
+					</mapdetails>		
+				</maptemplate>

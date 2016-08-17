@@ -1,0 +1,194 @@
+
+<ontology type="Metafora">
+	<elements>
+		<element elementtype="box" elementid="argument" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Argument"/>
+			<uisettings height="50" width="180" background-color="#FF8080" resizable="true" font-color="#000000" border="double"/>
+			<childelements>
+				<element elementtype="text" elementid="text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="26"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="awareness" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" maxheight="15" minheight="15"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="relation" elementid="relates to..." minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions endings="false" heading="relates to..."/>
+			<uisettings linewidth="2px" linecolor="#000000" height="200" details="false" width="120" background-color="#000000"/>
+			<childelements/>
+		</element>
+		<element elementtype="box" elementid="claim" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Claim"/>
+			<uisettings height="200" width="180" background-color="#7373ff" resizable="true" font-color="#000000" border="standard"/>
+			<childelements>
+				<element elementtype="text" elementid="text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="26"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="awareness" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" maxheight="15" minheight="15"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="box" elementid="question" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Question"/>
+			<uisettings height="50" width="180" background-color="#c4ffc4" resizable="true" font-color="#000000" border="dashed"/>
+			<childelements>
+				<element elementtype="text" elementid="text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="26"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="awareness" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" maxheight="15" minheight="15"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="box" elementid="explanation" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Explanation"/>
+			<uisettings height="50" width="180" background-color="#ffd800" resizable="true" font-color="#000000" border="zigzag"/>
+			<childelements>
+				<element elementtype="text" elementid="text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="26"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="awareness" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" maxheight="15" minheight="15"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="box" elementid="task" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Task"/>
+			<uisettings height="50" width="180" background-color="#E6E6E6" resizable="true" font-color="#000000" border="round"/>
+			<childelements>
+				<element elementtype="text" elementid="text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="26"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="awareness" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" maxheight="15" minheight="15"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="box" elementid="Reference" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Image Reference"/>
+			<uisettings height="200" width="200" background-color="orange" border="round"/>
+			<childelements>
+				<element elementid="image22" elementtype="image" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" textonimage="false" source="http://adapterrex.hcii.cs.cmu.edu:8080/Metafora/media/clickToSetImage.jpg" dragable="true"/>
+					<uisettings windowheight="400" windowwidth="400" minheight="100"  background-color="#5CB3FF" font-color="#000000" />
+				</element>
+				<element elementtype="text" elementid="Reference-text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings minheight="42"/>
+					<childelements/>
+				</element>
+				<element elementtype="url" elementid="url" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings maxheight="16" minheight="16"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="author" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings maxheight="16" minheight="16"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="box" elementid="ToolReference" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Tool Reference"/>
+			<uisettings height="200" width="200" background-color="orange" border="round" />
+			<childelements>
+				<element elementid="tool-ref-frame" elementtype="frame" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions />
+					<uisettings windowheight="100" windowwidth="100" minheight="100" editable="false"/>
+				</element>
+				<element elementtype="text" elementid="tool-ref-text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings minheight="42"/>
+					<childelements/>
+				</element>
+				<element elementtype="url" elementid="tool-ref-url" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings maxheight="16" minheight="16"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="tool-ref-author" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings maxheight="16" minheight="16"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="box" elementid="MetaforaToolReference" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions heading="Metafora Tool Reference"/>
+			<uisettings height="200" width="200" background-color="orange" border="round" />
+			<childelements>
+				<element elementid="met-tool-ref-frame" elementtype="frame" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions />
+					<uisettings windowheight="100" windowwidth="100" minheight="100" editable="true" />
+				</element>
+				<element elementtype="text" elementid="met-tool-ref-text" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings minheight="42"/>
+					<childelements/>
+				</element>
+				<element elementtype="xmppMessageButton" elementid="met-tool-xmpp-button" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings maxheight="40" minheight="32"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="met-tool-ref-author" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions/>
+					<uisettings maxheight="16" minheight="16"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+		<element elementtype="relation" elementid="supports" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions endings="true" heading="supports"/>
+			<uisettings linewidth="2px" height="200" linecolor="green" details="false" width="120" background-color="green"/>
+			<childelements/>
+		</element>
+		<element elementtype="relation" elementid="opposes" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions endings="true" heading="opposes"/>
+			<uisettings linewidth="2px" linecolor="red" height="200" details="false" width="120" background-color="red"/>
+			<childelements/>
+		</element>
+		<element elementtype="relation" elementid="Link" minquantity="0" maxquantity="0" quantity="0">
+			<elementoptions endings="true" heading="Link"/>
+			<uisettings linewidth="2px" height="120" linecolor="#5FC977" width="120" background-color="#5FC977" resizable="false" font-color="#000000" border=""/>
+			<childelements>
+				<element elementtype="text" elementid="text" minquantity="0" maxquantity="1" quantity="0">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="26"/>
+					<childelements/>
+				</element>
+				<element elementtype="awareness" elementid="awareness" minquantity="1" maxquantity="1" quantity="1">
+					<elementoptions text=""/>
+					<uisettings background-color="#FFFFFF" font-color="#000000" maxheight="15" minheight="15"/>
+					<childelements/>
+				</element>
+			</childelements>
+		</element>
+	</elements>
+</ontology>

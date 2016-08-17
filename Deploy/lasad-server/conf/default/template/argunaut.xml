@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maptemplate uniquename="argunaut" ontology="Argunaut" title="Argunaut">
+					<mapdetails>
+						<description>
+							Enabled configurations: chat system, list of users, group-pointer; cursor-tracking: disabled
+						</description>
+						<options maxuser="20" chatsystem="true" listofusers="true" feedback="true" track-cursor="false" group-pointer="true" allowlinkstolinks="true"/>
+					</mapdetails>
+	</maptemplate>

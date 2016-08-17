@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ontology type="Argunaut">
+	<elements>
+		<element elementid="claim" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Claim" />
+			<uisettings width="180" height="200" resizable="true"
+				border="standard" background-color="#7373ff" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="argument" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Argument" />
+			<uisettings width="180" height="50" resizable="true"
+				border="double" background-color="#FF8080" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="task" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Task" />
+			<uisettings width="180" height="50" resizable="true"
+				border="round" background-color="#E6E6E6" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="question" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Question" />
+			<uisettings width="180" height="50" resizable="true"
+				border="dashed" background-color="#c4ffc4" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="explanation" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Explanation" />
+			<uisettings width="180" height="50" resizable="true"
+				border="zigzag" background-color="#ffd800" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="Link" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Link" endings="true" />
+			<uisettings width="120" height="120" resizable="false"
+				border="" background-color="#5FC977" font-color="#000000" linewidth="2px"
+				linecolor="#5FC977" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="oppose" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Oppose" endings="true" />
+			<uisettings width="120" height="120" resizable="false"
+				border="" background-color="#FF7979" font-color="#000000" linewidth="2px"
+				linecolor="#FF7979" />
+			<childelements>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="support" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Support" endings="true" />
+			<uisettings width="120" height="120" resizable="false"
+				border="" background-color="#0B32FF" font-color="#000000" linewidth="2px"
+				linecolor="#0B32FF" />
+			<childelements>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+	</elements>
+</ontology>

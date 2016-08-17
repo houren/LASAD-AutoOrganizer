@@ -1,0 +1,796 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+/** COMMONS **/
+.common_textfield_label {
+	font-size: 10px;
+	color: darkgrey;
+	height: 100%;
+	float: left;
+	padding-left: 1px;
+	padding-right: 3px;
+}
+
+/** BOX */
+/** Frame */
+.frame_normal {
+	background-color: transparent !important;
+}
+
+.connectorPanel_normal {
+	background-color: transparent !important;
+}
+
+.box_normal {
+	border: solid 1px !important;
+}
+
+.box_highlight_border {
+	border: #FFFF00 solid 1px !important;
+}
+
+.box_footer {
+	font-size: 10px;
+	color: black;
+	padding-left: 2px;
+}
+
+.box_footer_author {
+	font-size: 10px;
+	color: black;
+	padding-right: 2px;
+	text-align: right;
+}
+
+.box_header {
+	font-size: 11px;
+	padding-top: 2px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	line-height: 14px;
+}
+
+.box_header_bg {
+	font-size: 11px;
+	padding-top: 2px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	line-height: 14px;
+	background-image: url(images/box/top-bg.png) !important;
+}
+
+.box_delete_button {
+	background-image: url(images/box/delete.gif) !important;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+}
+
+.box_duplicate_button {
+	background-image: url(images/box/duplicate.gif) !important;
+	background-repeat: no-repeat;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+}
+
+.box_label_background {
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	background-position: 0pt 0pt;
+	font-size: 10px;
+	color: black;
+	padding-left: 2px;
+}
+
+.box_mapselected {
+	border-color: black !important;
+}
+
+.box-outerGrid-table {
+	border-collapse: collapse;
+}
+
+.box-innerGrid-table {
+	border-collapse: collapse;
+	background-color: #FFFFFF;
+}
+
+/* START: Connectors */
+.box-areas {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.north-connector {
+	position: relative;
+	width: 24px;
+	height: 12px;
+	background: url(images/box/connectorNorth.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	z-index: 1;
+}
+
+.north-connector-dark {
+	position: relative;
+	width: 24px;
+	height: 12px;
+	background: url(images/box/connectorNorthDark.gif);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	z-index: 1;
+}
+
+.east-connector {
+	position: absolute;
+	width: 12px;
+	height: 24px;
+	background: url(images/box/connectorEast.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	z-index: 1;
+}
+
+.east-connector-dark {
+	position: absolute;
+	width: 12px;
+	height: 24px;
+	background: url(images/box/connectorEastDark.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	z-index: 1;
+}
+
+.south-connector {
+	position: relative;
+	width: 24px;
+	height: 12px;
+	background: url(images/box/connectorSouth.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+	z-index: 1;
+}
+
+.south-connector-dark {
+	position: relative;
+	width: 24px;
+	height: 12px;
+	background: url(images/box/connectorSouthDark.gif);
+	background-repeat: no-repeat;
+	background-position: center top;
+	z-index: 1;
+}
+
+.west-connector {
+	position: relative;
+	width: 12px;
+	height: 24px;
+	background: url(images/box/connectorWest.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	z-index: 1;
+}
+
+.west-connector-dark {
+	position: relative;
+	width: 12px;
+	height: 24px;
+	background: url(images/box/connectorWestDark.gif);
+	background-repeat: no-repeat;
+	background-position: right center;
+	z-index: 1;
+}
+/* END: Connectors */
+/* START: Border 
+!important is necessary to ensure IE compatibility for highlighting with individual color, it will force the background attribute to refresh
+*/
+.border-ulc-standard {
+	background: url(images/border/standard/topleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-umc-standard {;
+	background: url(images/border/standard/top.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-urc-standard {
+	background: url(images/border/standard/topright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-mlc-standard {
+	background: url(images/border/standard/left.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-mrc-standard {
+	background: url(images/border/standard/right.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-blc-standard {
+	background: url(images/border/standard/bottomleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-bmc-standard {
+	background: url(images/border/standard/bottom.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-brc-standard {
+	background: url(images/border/standard/bottomright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-ulc-round {
+	background: url(images/border/round/topleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-umc-round {;
+	background: url(images/border/round/top.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-urc-round {
+	background: url(images/border/round/topright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-mlc-round {
+	background: url(images/border/round/left.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-mrc-round {
+	background: url(images/border/round/right.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-blc-round {
+	background: url(images/border/round/bottomleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-bmc-round {
+	background: url(images/border/round/bottom.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-brc-round {
+	background: url(images/border/round/bottomright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-ulc-double {
+	background: url(images/border/double/topleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-umc-double {;
+	background: url(images/border/double/top.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-urc-double {
+	background: url(images/border/double/topright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-mlc-double {
+	background: url(images/border/double/left.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-mrc-double {
+	background: url(images/border/double/right.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-blc-double {
+	background: url(images/border/double/bottomleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-bmc-double {
+	background: url(images/border/double/bottom.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-brc-double {
+	background: url(images/border/double/bottomright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-ulc-dashed {
+	background: url(images/border/dashed/topleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-umc-dashed {;
+	background: url(images/border/dashed/top.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-urc-dashed {
+	background: url(images/border/dashed/topright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-mlc-dashed {
+	background: url(images/border/dashed/left.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-mrc-dashed {
+	background: url(images/border/dashed/right.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-blc-dashed {
+	background: url(images/border/dashed/bottomleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-bmc-dashed {
+	background: url(images/border/dashed/bottom.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-brc-dashed {
+	background: url(images/border/dashed/bottomright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-ulc-zigzag {
+	background: url(images/border/zigzag/topleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-umc-zigzag {;
+	background: url(images/border/zigzag/top.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-urc-zigzag {
+	background: url(images/border/zigzag/topright.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-mlc-zigzag {
+	background: url(images/border/zigzag/left.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-mrc-zigzag {
+	background: url(images/border/zigzag/right.gif) !important;
+	background-repeat: repeat-y;
+}
+
+.border-blc-zigzag {
+	background: url(images/border/zigzag/bottomleft.gif) !important;
+	background-repeat: no-repeat;
+}
+
+.border-bmc-zigzag {
+	background: url(images/border/zigzag/bottom.gif) !important;
+	background-repeat: repeat-x;
+}
+
+.border-brc-zigzag {
+	background: url(images/border/zigzag/bottomright.gif) !important;
+	background-repeat: no-repeat;
+}
+/* END: Border */
+/* Resize corners */
+.resizeCornerNW {
+	background: url(images/box/resizeCornerNW.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.resizeCornerNW-red {
+	background: url(images/box/resizeCornerRedNW.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.resizeCornerNE {
+	background: url(images/box/resizeCornerNE.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.resizeCornerNE-red {
+	background: url(images/box/resizeCornerRedNE.gif);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+.resizeCornerSW {
+	background: url(images/box/resizeCornerSW.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.resizeCornerSW-red {
+	background: url(images/box/resizeCornerRedSW.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.resizeCornerSE {
+	background: url(images/box/resizeCornerSE.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+.resizeCornerSE-red {
+	background: url(images/box/resizeCornerRedSE.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+/* Box elements */
+.box-heading {
+	position: relative;
+	background-image: url(images/box/top-bg.png);
+	background-repeat: repeat-x;
+	border: 1px solid darkgrey;
+	border-collapse: collapse;
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+	overflow: hidden;
+}
+
+.box-heading-text {
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+}
+
+.add-button {
+	background: url(images/common/add.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 25px;
+	height: 11px;
+	width: 11px;
+}
+
+.add-button-highlighted {
+	background: url(images/common/addRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 25px;
+	height: 11px;
+	width: 11px;
+}
+
+.switch-direction-button {
+	background: url(images/common/switch_direction.gif) no-repeat center
+		center;
+	position: absolute;
+	top: 1px;
+	right: 49px;
+	height: 11px;
+	width: 11px;
+}
+
+.switch-direction-button-highlighted {
+	background: url(images/common/switch_direction_red.gif) no-repeat center
+		center;
+	position: absolute;
+	top: 1px;
+	right: 49px;
+	height: 11px;
+	width: 11px;
+}
+
+.del-button {
+	background: url(images/common/del.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 37px;
+	height: 11px;
+	width: 11px;
+}
+
+.del-button-highlighted {
+	background: url(images/common/delRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 37px;
+	height: 11px;
+	width: 11px;
+}
+
+.close-button {
+	background: url(images/common/close.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	height: 11px;
+	width: 11px;
+}
+
+.close-button-highlighted {
+	background: url(images/common/closeRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	height: 11px;
+	width: 11px;
+}
+
+.config-button {
+	background: url(images/common/config.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 13px;
+	height: 11px;
+	width: 11px;
+}
+
+.config-button-highlighted {
+	background: url(images/common/configRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 13px;
+	height: 11px;
+	width: 11px;
+}
+
+.box-labeled-textfield-container {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.box-labeled-textfield {
+	font-size: 10px;
+	color: black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	height: 100%;
+	width: 100%;
+}
+
+.box-textfield-viewMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: visible;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	height: 100%;
+	width: 100%;
+}
+
+.box-textfield-container-viewMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	height: 100%;
+}
+
+.box-textfield-editMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	height: 100%;
+	width: 100%;
+}
+
+.box-textfield-container-editMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: visible;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+}
+
+.box-authorfield {
+	font-size: 10px;
+	background-color: #FFFFFF;
+	color: #999999;
+	overflow: hidden;
+}
+
+.box-url {
+	font-size: 10px;
+	overflow: hidden;
+}
+
+/* Extended Box - SpotsElement */
+.extendedSpotsElement-text {
+	width: 100%;
+	border-collapse: collapse;
+	border: 0px;
+	color: darkgrey;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+}
+
+/* Extended Box - Dropdown */
+.box-ee-dropdown-div {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.box-ee-dropdown-label {
+	width: 30%;
+	font-size: 10px;
+	float: left;
+	color: black;
+}
+
+.box-ee-dropdown-selectdiv {
+	width: 70%;
+	float: right;
+}
+
+.box-ee-dropdown-select {
+	width: 100%;
+	font-size: 10px;
+}
+
+.box-ee-dropdown-select-only {
+	width: 100%;
+}
+
+/* Extended Box - AwarenessElement */
+.extendedAwarenessElement {
+	font-size: 9px;
+	position: relative;
+}
+
+.extendedAwarenessElement-Text {
+	border: 0px;
+	color: black;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.box-ee-awareness-div {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.box-ee-awareness-icondiv {
+	background: url(images/box/icon_user.gif);
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.box-ee-awareness-viewModeDiv {
+	font-size: 10px;
+	color: darkgray;
+	height: 100%;
+}
+
+/* Extended Box - TranscriptLink */
+.box-ee-transcript-div {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.box-ee-transcript-icondiv {
+	background: url(images/box/page_left.gif);
+	background-repeat: no-repeat;
+	float: left;
+}
+
+.box-ee-transcript-viewModeDiv {
+	font-size: 10px;
+	color: darkgray;
+	height: 100%;
+}
+
+.box-ee-transcript-editModeDiv {
+	position: absolute;
+	font-size: 10px;
+	color: black;
+	padding: 2px;
+	padding-bottom: 1px;
+	background-color: #EBEBEB;
+	border: 1px solid darkgray;
+	z-Index: 9999;
+}
+
+.box-ee-transcript-editMode-header {
+	position: relative;
+	background-image: url(images/box/top-bg.png);
+	background-repeat: repeat-x;
+	background-color: darkgray;
+	width: 160px;
+	font-size: 10px;
+	color: black;
+	padding-left: 5px;
+	margin-bottom: 3px;
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+	border-collapse: collapse;
+	border: 1px solid gray;
+}
+
+.box-ee-transcript-editMode-header-button {
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	right: 0px;
+	top: 1px;
+	width: 10px;
+	height: 10px;
+	margin: 0px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border: 1px solid darkgray;
+	cursor: pointer;
+}
+
+.box-ee-transcript-editMode-input {
+	font-size: 10px;
+	color: black;
+	border: 1px solid black;
+	width: 25px;
+	float: left;
+	padding-left: 2px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.box-ee-transcript-editMode-text {
+	font-size: 10px;
+	color: #999999;
+	float: left;
+}
+
+.float-left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}

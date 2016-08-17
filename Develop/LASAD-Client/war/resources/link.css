@@ -1,0 +1,406 @@
+.link-heading {
+	background-image: url(images/link/top-link-bg.png) !important;
+	background-repeat: no-repeat !important;
+	border-bottom: 1px solid #999999;
+	font-size: 9px;
+	font-weight: bold;
+	color: black;
+	width: 100%;
+	position: relative;
+}
+
+.link-heading-nondetails {
+	min-width: 13px;
+	min-height: 13px;
+	font-size: 9px;
+	font-weight: bold;
+	color: black;
+	width: 100%;
+	position: relative;
+}
+
+.link-heading-text {
+	font-size: 10px;
+	font-weight: bold;
+	color: black;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+}
+
+.link-textfield-viewMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: visible;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+	height: 100%;
+}
+
+.link-textfield-container-viewMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-bottom: 1pt solid lightgrey;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+}
+
+.link-textfield-container-editMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: visible;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+}
+
+.link-textfield-editMode {
+	font-size: 10px;
+	color: black;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	border-bottom: 1pt solid #999999;
+	background-image: url(images/box/text-bg.gif);
+	background-repeat: repeat-x;
+	background-attachment: scroll;
+}
+
+.link-connection-icon-container {
+	width: 13px;
+}
+
+.link-connection-icon {
+	background: url(images/link/connectionIcon.gif) no-repeat center top;
+	width: 13px;
+	min-height: 13px;
+}
+
+.link-content {
+	border: 1px solid #999999 !important;
+	background-color: #FFFFFF;
+	position: absolute;
+	overflow: hidden;
+}
+
+.link-content-nondetails {
+	position: absolute;
+	overflow: hidden;
+}
+
+.link-content-highlighted {
+	border: 5px solid #FF0000;
+	position: absolute;
+	overflow: hidden;
+	background-color: #FFFFFF;
+}
+
+.link-content-highlighted-color {
+	position: absolute;
+	overflow: hidden;
+	background-color: #FFFFFF;
+	/* Border color dynamically set via DOM */
+}
+
+.link-add-button {
+	background: url(images/common/add.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 25px;
+	height: 11px;
+	width: 11px;
+}
+
+.link-add-button-highlighted {
+	background: url(images/common/addRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 25px;
+	height: 11px;
+	width: 11px;
+}
+
+.link-close-button {
+	background: url(images/common/close.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	height: 11px;
+	width: 11px;
+}
+
+.link-close-button-highlighted {
+	background: url(images/common/closeRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	height: 11px;
+	width: 11px;
+}
+
+.link-config-button {
+	background: url(images/common/config.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 13px;
+	height: 11px;
+	width: 11px;
+}
+
+.link-config-button-highlighted {
+	background: url(images/common/configRed.gif) no-repeat center center;
+	position: absolute;
+	top: 1px;
+	right: 13px;
+	height: 11px;
+	width: 11px;
+}
+
+/*  EXTENDED ELEMENTS */
+/* EXTENDED TEXT ELEMENT */
+.extendedTextElement {
+	font-size: 9px;
+	position: relative;
+}
+
+.extendedTextElement-TextLabel-Left {
+	font-weight: bold;
+	color: #808080;
+	/* min-width: 25px; */
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding-left: 2px;
+	padding-top: 1px;
+	padding-right: 4px;
+	padding-bottom: 1px;
+}
+
+.extendedTextElement-TextLabel-Top {
+	font-weight: bold;
+	color: #808080;
+	min-width: 25px;
+	position: relative;
+	padding-left: 2px;
+	padding-top: 1px;
+	padding-right: 4px;
+	padding-bottom: 1px;
+}
+
+.extendedTextElement-TextArea-ViewMode {
+	border: 1px solid #999999;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedTextElement-TextArea-ViewModeTop {
+	border: 1px solid #999999;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: relative;
+	width: 100% !important;
+}
+
+.extendedTextElement-TextArea-EditMode {
+	border: 1px solid #000064;
+	background-color: #FFFFBB;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedTextElement-TextArea-EditModeTop {
+	border: 1px solid #000064;
+	background-color: #FFFFBB;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: relative;
+	width: 100% !important;
+}
+
+.extendedTextElement-TextArea-LockedMode {
+	border: 1px solid #000064;
+	background-color: #E3E3E3;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedTextElement-TextArea-LockedModeTop {
+	border: 1px solid #000064;
+	background-color: #E3E3E3;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: relative;
+	width: 100% !important;
+}
+
+.extendedTextElement-TextField-ViewMode {
+	border: 1px solid #999999;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedTextElement-TextField-ViewModeTop {
+	border: 1px solid #999999;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: relative;
+	width: 100% !important;
+}
+
+.extendedTextElement-TextField-EditMode {
+	border: 1px solid #000064;
+	background-color: #FFFFBB;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedTextElement-TextField-EditModeTop {
+	border: 1px solid #000064;
+	background-color: #FFFFBB;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: relative;
+	width: 100% !important;
+}
+
+.extendedTextElement-TextField-LockedMode {
+	border: 1px solid #000064;
+	background-color: #E3E3E3;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedTextElement-TextField-LockedModeTop {
+	border: 1px solid #000064;
+	background-color: #E3E3E3;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: relative;
+	width: 100% !important;
+}
+
+.extendedURLElement {
+	font-size: 9px;
+	position: relative;
+}
+
+.extendedURLElement-Logo {
+	min-width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url(images/box/icon_world.gif);
+	background-repeat: no-repeat;
+}
+
+.extendedURLElement-EditButton {
+	min-width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	background: url(images/box/icon_world.gif);
+	background-repeat: no-repeat;
+}
+
+.extendedUFrameElement-EditButton {
+	min-width: 16px;
+	height: 16px;
+	background-color: #FFFFBB;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	right: 0px;
+	top: 0px;
+	color: black;
+	text-align: left;
+	background: url(images/box/icon_world.gif);
+	background-repeat: no-repeat;
+}
+
+.extendedUFrameElement-Alignment {
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.extendedURLElement-TextField-ViewMode {
+	border: 0px;
+	color: blue;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedURLElement-TextField-EditMode {
+	border: 1px solid #000064;
+	background-color: #FFFFBB;
+	font-size: 10px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.extendedUFrame-TextField-EditMode {
+	border: 1px solid #000064;
+	background-color: #FFFFBB;
+	font-size: 13px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	padding: 1px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+/* EXTENDED ELEMENT CONTAINER */
+.extendedElementContainer-root {
+	position: relative;
+	overflow: hidden;
+}
+
+.extendedElementContainer {
+	position: relative;
+}

@@ -1,0 +1,22 @@
+.tutorialStep-div {
+	font-size: 11px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	color: #000000 !important;
+	padding: 5px;
+	background-color: #E1E9F2;
+	min-height: 100%;
+}
+
+.tutorialStepTemp-div {
+	font-size: 8px;
+	background-color: #E1E9F2;
+	height: 10px;
+}
+
+.tutorialStep-div img {
+	border: 1px solid black;
+	max-width: 100%;
+	width: inherit;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}

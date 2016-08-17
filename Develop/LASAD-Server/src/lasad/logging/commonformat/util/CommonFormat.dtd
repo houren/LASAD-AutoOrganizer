@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- common format describing input-data for anaysis tools -->
+
+<!-- general root-element for the document -->
+<!ELEMENT interactiondata (preamble?, actions)>
+
+<!ELEMENT preamble (users?, groups?, objects?, roles?, conditions?, document_information?, time_range?, description?, additional_information*)>
+
+<!ELEMENT users (user_def*)>
+
+<!ELEMENT user_def (description?, properties?, additional_information?)>
+<!ATTLIST user_def id ID #REQUIRED>
+<!ATTLIST user_def firstname CDATA #REQUIRED>
+<!ATTLIST user_def lastname CDATA #IMPLIED>
+<!ATTLIST user_def role CDATA #IMPLIED>
+
+<!ELEMENT groups (group_def*)>
+
+<!ELEMENT group_def (time_range?, members, description?)>
+<!ATTLIST group_def id ID #REQUIRED>
+
+<!ELEMENT members (member_def*)>
+
+<!ELEMENT member_def EMPTY>
+<!ATTLIST member_def id ID #REQUIRED> <!-- id from the user_def -->
+
+<!ELEMENT objects (object_def*)>
+
+<!ELEMENT object_def (description?, properties?, additional_information*)>
+<!ATTLIST object_def type CDATA #REQUIRED>
+<!ATTLIST object_def id ID #REQUIRED>
+
+<!ELEMENT roles (role_def*)>
+
+<!ELEMENT role_def (description)>
+<!ATTLIST role_def id ID #REQUIRED>
+
+<!ELEMENT conditions (instructions?, description?)>
+<!ATTLIST conditions creator_application CDATA #IMPLIED>
+<!ATTLIST conditions application_version CDATA #IMPLIED>
+<!ATTLIST conditions experimenter CDATA #IMPLIED>
+
+<!ELEMENT instructions (instruction*)>
+
+<!ELEMENT instruction (PCDATA)>
+<!-- maybe some document-link, or some free text -->
+
+<!ELEMENT time_range EMPTY>
+<!ATTLIST time_range from CDATA #REQUIRED>
+<!ATTLIST time_range to CDATA #REQUIRED>
+
+<!-- root element for action-description -->
+<!ELEMENT actions (action*)>
+
+<!-- any action that is to be analyzed -->
+<!ELEMENT action (actiontype, user+, object?, content?, transport?)>
+<!ATTLIST action time CDATA #REQUIRED>
+
+<!-- description of the action itself -->
+<!-- classification: a general classification, other for anaything that does not fit into the classification, intendend for hand-edited actions, not for logged ones -->
+<!-- type: more specific description, in case of logged actions the description used in the original enviroment -->
+<!-- logged: describes if the action is automatically logged or hand-edited-->
+<!ELEMENT actiontype (additional_information*)>
+<!ATTLIST actiontype classification (create| delete | read | write | move | modify | other) #REQUIRED>
+<!ATTLIST actiontype type CDATA #REQUIRED>
+<!ATTLIST actiontype logged (true | false) #REQUIRED>
+<!ATTLIST actiontype succeed (true | false) #IMPLIED>
+
+<!-- description of users involved into the action -->
+<!-- role: at least one originator is to be given -->
+<!ELEMENT user (additional_information*)>
+<!ATTLIST user id CDATA #REQUIRED>
+<!ATTLIST user ip CDATA #IMPLIED>
+<!ATTLIST user role (originator | receiver) #REQUIRED> <!-- this reflects the role with respect to sending or receiving messages -->
+<!ATTLIST user user_role (originator | receiver) #IMPLIED> <!-- this reflects the role the user plays within the group, e.g. teacher, student, tutor, ... -->
+
+<!ELEMENT object (properties?, additional_information*, object*)>
+<!ATTLIST object id CDATA #REQUIRED>
+<!ATTLIST object type CDATA #REQUIRED>
+
+<!ELEMENT content (description?, properties?, additional_information*)>
+
+<!ELEMENT properties (property*)>
+
+<!ELEMENT property EMPTY>
+<!ATTLIST property name CDATA #REQUIRED>
+<!ATTLIST property value CDATA #REQUIRED>
+
+<!ELEMENT transport ANY>
+<!ATTLIST transport type CDATA #REQUIRED>
+
+<!-- space for saving any kind of information wanted in the file, that is not covered anywhere else -->
+<!ELEMENT additional_information ANY>
+<!ATTLIST additional_information type CDATA #REQUIRED>
+
+<!-- space for human readable description -->
+<!ELEMENT description (#PCDATA)>

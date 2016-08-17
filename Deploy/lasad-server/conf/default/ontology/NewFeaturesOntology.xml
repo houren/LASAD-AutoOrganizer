@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ontology type="NewFeaturesOntology">
+	<elements>
+		<element elementid="claim" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Claim" />
+			<uisettings width="212" height="200" resizable="true"
+				border="standard" background-color="#7373ff" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				
+				<element elementid="myclaimrating" elementtype="radiobtn" quantity="1" minquantity="0" maxquantity="1">
+				<elementoptions label="Type"/>
+				<radiobuttonitems>
+				<radiobuttonitem id="claim1" label="Strong"  checked="1"/>
+				<radiobuttonitem id="claim3" label="Weak" checked="0"/>
+				</radiobuttonitems>
+				<uisettings width="212" minheight="30" background-color="#5CB3FF" font-color="#000000" />
+				</element>
+				
+					<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		
+		
+		
+		
+		
+			<element elementid="Image" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Image"/>
+			<uisettings width="180" height="500" resizable="true"
+			border="round" background-color="#7373ff" font-color="#000000" />
+			<childelements>
+		<element elementid="image22" elementtype="image" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" textonimage="false" source="http://www.concertforcancer.org/photo_not_available_poster-p228239333753012519tdcp_400.jpg" dragable="true"/>
+					<uisettings windowheight="400" windowwidth="400" minheight="100"  background-color="#5CB3FF" font-color="#000000" />
+				</element>
+	
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions  text=""  />
+					<uisettings background-color="#FFFFFF" font-color="#000000" minheight="30" maxheight="30" resizable="true" />
+				</element>
+								
+					<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		
+		<element elementid="argument" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Argument" />
+			<uisettings width="212" height="50" resizable="true"
+				border="double" background-color="#FF8080" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				
+			<element elementid="myargumentrating" elementtype="radiobtn" quantity="1" minquantity="0" maxquantity="1">
+				<elementoptions label="is it possible?"/>
+				<radiobuttonitems>
+				<radiobuttonitem id="selec1" label="Yes" checked="0"/>
+				<radiobuttonitem id="select2" label="No" checked="1"/>	
+				</radiobuttonitems>
+				<uisettings minheight="30" maxheight="30" background-color="#5CB3FF" font-color="#000000" />
+				</element>
+				
+				
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="task" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Task" />
+			<uisettings width="212" height="50" resizable="true"
+				border="round" background-color="#E6E6E6" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="mytaskrating" elementtype="radiobtn" quantity="1" minquantity="0" maxquantity="1">
+				<elementoptions label="Priority"/>
+				<radiobuttonitems>
+				<radiobuttonitem id="task1" label="High" checked="0"/>
+				<radiobuttonitem id="task2" label="Medium" checked="1"/>
+				<radiobuttonitem id="task3" label="Low" checked="0"/>	
+				</radiobuttonitems>
+				<uisettings minheight="30" maxheight="30" background-color="#5CB3FF" font-color="#000000" />
+				</element>
+					<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		
+		
+		
+		<element elementid="question" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Question" />
+			<uisettings width="212" height="40" resizable="true"
+				border="dashed" background-color="#c4ffc4" font-color="#000000" />
+
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				
+	
+		
+		<element elementid="myquestionrating" elementtype="radiobtn" quantity="1" minquantity="0" maxquantity="1">
+				<elementoptions label="Answered"/>
+				<radiobuttonitems>
+				<radiobuttonitem id="selection1" label="Yes" checked="0"/>
+				<radiobuttonitem id="selection2" label="No" checked="1"/>	
+				</radiobuttonitems>
+				<uisettings minheight="30" maxheight="30" background-color="#5CB3FF" font-color="#000000" />
+				</element>
+				
+				
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+			
+			
+			
+			
+			
+			
+		</element>
+		<element elementid="explanation" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Explanation" />
+			<uisettings width="212" height="50" resizable="true"
+				border="zigzag" background-color="#ffd800" font-color="#000000" />
+			<childelements>
+				<element elementid="headline" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Title" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+			    <element elementid="myexplanationrating" elementtype="radiobtn" quantity="1" minquantity="0" maxquantity="1">
+				<elementoptions label="Status"/>
+				<radiobuttonitems>
+				<radiobuttonitem id="exp1" label="Accepted" checked="0"/>
+				<radiobuttonitem id="exp2" label="Rejected" checked="1"/>
+				<radiobuttonitem id="exp3" label="N/I" checked="0"/>
+				</radiobuttonitems>
+						<uisettings width="212" minheight="30" background-color="#5CB3FF" font-color="#000000" />
+				</element>
+				
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="Link" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Link" endings="true" />
+			<uisettings width="120" height="120" resizable="false"
+				border="" background-color="#5FC977" font-color="#000000" linewidth="2px"
+				linecolor="#5FC977" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="26" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="oppose" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Oppose" endings="true" />
+			<uisettings width="120" height="120" resizable="false"
+				border="" background-color="#FF7979" font-color="#000000" linewidth="2px"
+				linecolor="#FF7979" />
+			<childelements>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				
+				
+				
+				
+				
+			</childelements>
+		</element>
+		
+		
+		
+		<element elementid="Ugur" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Info" endings="true" />
+			<uisettings width="30" height="35" resizable="false"
+				border="round"  background-color="#FF7979" font-color="#000000" linewidth="2px"
+				linecolor="#FF7979" />
+			<childelements>
+				<element elementid="infoelementss" elementtype="infoelement"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="20" maxheight="20" />
+				</element>
+				
+				
+				
+				
+				
+			</childelements>
+		</element>
+		
+		
+		
+		<element elementid="support" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Support" endings="true" />
+			<uisettings width="120" height="120" resizable="false"
+				border="" background-color="#0B32FF" font-color="#000000" linewidth="2px"
+				linecolor="#0B32FF" />
+			<childelements>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+	</elements>
+</ontology>

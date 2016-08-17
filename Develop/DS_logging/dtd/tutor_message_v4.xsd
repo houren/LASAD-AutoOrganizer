@@ -1,0 +1,453 @@
+<!--
+File @version $Revision: 1.10 $
+Last modified on: $Date: 2007/10/04 14:40:09 $
+-->
+<!-- $KeyWordsOff: $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+ <xsd:element name="tutor_related_message_sequence">
+    <xsd:complexType>
+       <xsd:choice minOccurs="1" maxOccurs="unbounded">
+          <xsd:element ref="tool_message"/>
+          <xsd:element ref="tutor_message"/>
+          <xsd:element ref="context_message"/>
+          <xsd:element ref="message"/>
+       </xsd:choice>
+       <xsd:attribute name="version_number" type="string_1" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="context_message">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="meta" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="class" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="dfa" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="dataset" minOccurs="1" maxOccurs="1"/>
+          <xsd:element ref="skill" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="condition" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="custom_field" minOccurs="0" maxOccurs="unbounded"/>
+       </xsd:sequence>
+       <xsd:attribute name="context_message_id" type="string_100" use="required"/>
+       <xsd:attribute name="name" type="string_100" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+ 
+ <xsd:element name="tool_message">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="meta" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="problem_name" minOccurs="0" maxOccurs="1"/>
+          <xsd:choice minOccurs="1" maxOccurs="unbounded">
+             <xsd:element ref="ui_event"/>
+             <xsd:element ref="semantic_event"/>
+          </xsd:choice>
+          <xsd:element ref="event_descriptor" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="custom_field" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="replay" minOccurs="0" maxOccurs="1"/>
+       </xsd:sequence>
+       <xsd:attribute name="context_message_id" type="string_100" use="required"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="tutor_message">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="meta" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="problem_name" minOccurs="0" maxOccurs="1"/>
+          <xsd:choice minOccurs="1" maxOccurs="unbounded">
+             <xsd:element ref="ui_event"/>
+             <xsd:element ref="semantic_event"/>
+          </xsd:choice>
+          <xsd:element ref="event_descriptor" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="action_evaluation" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="tutor_advice" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="skill" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="interpretation" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="custom_field" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="replay" minOccurs="0" maxOccurs="1"/>
+       </xsd:sequence>
+       <xsd:attribute name="context_message_id" type="string_100" use="required"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="message">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:any minOccurs="0" maxOccurs="unbounded" />
+       </xsd:sequence>
+       <xsd:attribute name="context_message_id" type="string_100" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="meta">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="user_id"/>
+          <xsd:element ref="session_id"/>
+          <xsd:element ref="time"/>
+          <xsd:element ref="time_zone"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="user_id">
+    <xsd:complexType>
+    <xsd:simpleContent>
+       <xsd:extension base="string_55">
+          <xsd:attribute name="anonFlag" use="optional" default="false">
+             <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                   <xsd:enumeration value="true"/>
+                   <xsd:enumeration value="false"/>
+                </xsd:restriction>
+             </xsd:simpleType>
+          </xsd:attribute>
+       </xsd:extension>
+    </xsd:simpleContent>
+ </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="session_id" type="string_255"/>
+
+ <xsd:element name="time" type="xsd:string"/>
+
+ <xsd:element name="time_zone" type="string_50"/>
+
+ <xsd:element name="class">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="name" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="school" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="period" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="description" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="instructor" minOccurs="0" maxOccurs="unbounded"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="school" type="string_100"/>
+ 
+ <xsd:element name="period" type="string_50"/>
+
+ <xsd:element name="instructor" type="string_55"/>
+ 
+ <xsd:element name="dfa" type="xsd:string"/>
+ 
+ <xsd:element name="dataset">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="conversion_date" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="converter_info" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="name" minOccurs="1" maxOccurs="1"/>
+          <xsd:element ref="level" minOccurs="1" maxOccurs="1"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="conversion_date" type="string_255"/>
+ 
+ <xsd:element name="converter_info" type="string_255"/>
+ 
+ <xsd:element name="level">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="name"/>
+          <xsd:choice minOccurs="1" maxOccurs="1">
+             <xsd:element ref="level"/>
+             <xsd:element ref="problem"/>
+          </xsd:choice>
+       </xsd:sequence>
+       <xsd:attribute name="type" type="string_100" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="problem">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="name" minOccurs="1" maxOccurs="1"/>
+          <xsd:element ref="context" minOccurs="0" maxOccurs="1"/>
+       </xsd:sequence>
+       <xsd:attribute name="tutorFlag" use="optional">
+          <xsd:simpleType>
+             <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="tutor"/>
+                <xsd:enumeration value="test"/>
+                <xsd:enumeration value="pre-test"/>
+                <xsd:enumeration value="post-test"/>
+                <xsd:enumeration value="other"/>
+             </xsd:restriction>
+          </xsd:simpleType>
+       </xsd:attribute>
+       <xsd:attribute name="other" type="string_50" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="skill">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="name" minOccurs="1" maxOccurs="1"/>
+          <xsd:element ref="category" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="model_name" minOccurs="0" maxOccurs="unbounded"/>
+       </xsd:sequence>
+       <xsd:attribute name="probability" type="xsd:string" use="optional"/>
+       <xsd:attribute name="buggy" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="category" type="string_50"/>
+
+ <xsd:element name="model_name" type="string_50"/>
+ 
+ <xsd:element name="condition">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="name" minOccurs="1" maxOccurs="1"/>
+          <xsd:element ref="type" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="desc" minOccurs="0" maxOccurs="1"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="custom_field">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="name" minOccurs="1" maxOccurs="1"/>
+          <xsd:element ref="value" minOccurs="1" maxOccurs="1"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+ 
+ <xsd:element name="value" type="string_255"/>
+ 
+ <xsd:element name="problem_name" type="string_255"/>
+ 
+ <xsd:element name="ui_event">
+    <xsd:complexType>
+       <xsd:attribute name="id" type="xsd:string" use="optional"/>
+       <xsd:attribute name="name" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="semantic_event">
+    <xsd:complexType mixed="true">
+       <xsd:attribute name="transaction_id" type="xsd:string" use="required"/>
+       <xsd:attribute name="name" type="string_30" use="optional"/>
+       <xsd:attribute name="trigger" use="optional">
+          <xsd:simpleType>
+             <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="USER"/>
+                <xsd:enumeration value="DATA"/>
+             </xsd:restriction>
+          </xsd:simpleType>
+       </xsd:attribute>
+       <xsd:attribute name="subtype" type="string_30" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="event_descriptor">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="selection" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="action" minOccurs="0" maxOccurs="unbounded"/>
+          <xsd:element ref="input" minOccurs="0" maxOccurs="unbounded"/>
+       </xsd:sequence>
+       <xsd:attribute name="event_id" type="xsd:IDREF" use="optional"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="selection">
+    <xsd:complexType>
+       <xsd:simpleContent>
+          <xsd:extension base="string_255">
+             <xsd:attribute name="id" type="string_32" use="optional"/>
+             <xsd:attribute name="type" type="string_50" use="optional"/>
+          </xsd:extension>
+       </xsd:simpleContent>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="action">
+    <xsd:complexType>
+       <xsd:simpleContent>
+          <xsd:extension base="string_255">
+             <xsd:attribute name="id" type="string_32" use="optional"/>
+             <xsd:attribute name="type" type="string_50" use="optional"/>
+          </xsd:extension>
+       </xsd:simpleContent>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="input">
+    <xsd:complexType>
+       <xsd:simpleContent>
+          <xsd:extension base="string_255">
+             <xsd:attribute name="id" type="string_32" use="optional"/>
+             <xsd:attribute name="type" type="string_50" use="optional"/>
+          </xsd:extension>
+       </xsd:simpleContent>
+    </xsd:complexType>
+ </xsd:element>
+ 
+ <xsd:element name="action_evaluation">
+    <xsd:complexType>
+       <xsd:simpleContent>
+          <xsd:extension base="string_30">
+             <xsd:attribute name="hint_id" type="string_255" use="optional"/>
+             <xsd:attribute name="current_hint_number" type="xsd:integer" use="optional"/>
+             <xsd:attribute name="total_hints_available" type="xsd:integer" use="optional"/>
+             <xsd:attribute name="classification" type="string_255" use="optional"/>
+          </xsd:extension>
+       </xsd:simpleContent>
+    </xsd:complexType>
+ </xsd:element>
+ 
+ <xsd:element name="replay">
+    <xsd:complexType mixed="true">
+       <xsd:sequence>
+          <xsd:any minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+ 
+ <xsd:element name="tutor_advice" type="xsd:string"/>
+ 
+ <xsd:element name="interpretation">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="correct_step_sequence" minOccurs="0" maxOccurs="1"/>
+          <xsd:element ref="incorrect_step_sequence" minOccurs="0" maxOccurs="1"/>
+       </xsd:sequence>
+       <xsd:attribute name="chosen" use="optional">
+          <xsd:simpleType>
+             <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="true"/>
+                <xsd:enumeration value="false"/>
+             </xsd:restriction>
+          </xsd:simpleType>
+       </xsd:attribute>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="correct_step_sequence">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="step" maxOccurs="unbounded"/>
+       </xsd:sequence>
+       <xsd:attribute name="ordered" use="optional">
+          <xsd:simpleType>
+             <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="true"/>
+                <xsd:enumeration value="false"/>
+             </xsd:restriction>
+          </xsd:simpleType>
+       </xsd:attribute>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="incorrect_step_sequence">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="step" maxOccurs="unbounded"/>
+       </xsd:sequence>
+       <xsd:attribute name="ordered" use="optional">
+          <xsd:simpleType>
+             <xsd:restriction base="xsd:string">
+                <xsd:enumeration value="true"/>
+                <xsd:enumeration value="false"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+       </xsd:attribute>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="step">
+    <xsd:complexType>
+       <xsd:sequence>
+          <xsd:element ref="step_info"/>
+          <xsd:element ref="rule" minOccurs="0" maxOccurs="unbounded"/>
+       </xsd:sequence>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="step_info" type="xsd:string"/>
+ 
+ <xsd:element name="rule" type="xsd:string"/>
+ 
+ <xsd:element name="name" type="string_255"/>
+
+ <xsd:element name="desc" type="xsd:string"/>
+ 
+ <xsd:element name="description" type="xsd:string"/>
+ 
+ <xsd:element name="type" type="string_255"/>
+
+ <xsd:element name="context" type="xsd:string"/>
+ 
+ <xsd:element name="property">
+    <xsd:complexType mixed="true">
+       <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+          <xsd:element ref="entry"/>
+       </xsd:sequence>
+       <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+ </xsd:element>
+
+ <xsd:element name="entry" type="xsd:string"/>
+ 
+ <!-- String Types -->
+ <xsd:simpleType name="string_1">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="1"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:simpleType name="string_30">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="30"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:simpleType name="string_32">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="32"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:simpleType name="string_50">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="50"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:simpleType name="string_55">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="55"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+
+ <xsd:simpleType name="string_75">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="75"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+
+ <xsd:simpleType name="string_80">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="80"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+
+ <xsd:simpleType name="string_100">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="100"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+ 
+ <xsd:simpleType name="string_255">
+    <xsd:restriction base="xsd:string">
+       <xsd:maxLength value="255"/>
+    </xsd:restriction>
+ </xsd:simpleType>
+ 
+</xsd:schema>

@@ -1,0 +1,13 @@
+Configuration Home: /Users/judy/Documents/CMU/LASAD/LASAD-CMU_auto_organizer/Deploy/lasad-server/conf/default
+first-----dropSQLString.appendlasad.actions-----
+else-----dropSQLString.appendlasad.element_parent_mapping-----
+else-----dropSQLString.appendlasad.elements-----
+else-----dropSQLString.appendlasad.map_to_user_restriction-----
+else-----dropSQLString.appendlasad.maps-----
+else-----dropSQLString.appendlasad.ontologies-----
+else-----dropSQLString.appendlasad.revisions-----
+else-----dropSQLString.appendlasad.templates-----
+else-----dropSQLString.appendlasad.users-----
+-----Clear All executed-----
+-----Create Table-----
+Server successfully started!

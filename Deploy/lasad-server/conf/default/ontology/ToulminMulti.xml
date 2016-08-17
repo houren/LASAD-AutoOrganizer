@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ontology type="Toulmin (Multi user)">
+	<elements>
+		<element elementid="datum" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Datum" />
+			<uisettings width="200" height="150" resizable="true"
+				border="double" background-color="#FFD800" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" height="100%" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="conclusion" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Conclusion" />
+			<uisettings width="200" height="150" resizable="true"
+				border="dashed" background-color="#FFD800" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" height="100%" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="warrant" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Warrant" />
+			<uisettings width="200" height="150" resizable="true"
+				border="standard" background-color="#FFD800" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="backing" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Backing" />
+			<uisettings width="200" height="150" resizable="true"
+				border="round" background-color="#FFD800" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" height="100%" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="rebuttal" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Rebuttal" />
+			<uisettings width="200" height="150" resizable="true"
+				border="zigzag" background-color="#FFD800" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" height="100%" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="qualifier" elementtype="relation"
+			quantity="" minquantity="" maxquantity="">
+			<elementoptions heading="Qualifier" endings="false" />
+			<uisettings width="165" height="100" resizable="false"
+				border="" background-color="#E6E6E6" font-color="#000000" linewidth="2px"
+				linecolor="#E6E6E6" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="30" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="since" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Since" endings="true" />
+			<uisettings width="165" height="100" resizable="false"
+				border="" background-color="#5FC977" font-color="#000000" linewidth="3px"
+				linecolor="#5FC977" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="30" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="onaccountof" elementtype="relation"
+			quantity="" minquantity="" maxquantity="">
+			<elementoptions heading="On account of" endings="true" />
+			<uisettings width="165" height="100" resizable="false"
+				border="" background-color="#FF7979" font-color="#000000" linewidth="4px"
+				linecolor="#FF7979" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="30" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="unless" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Unless" endings="true" />
+			<uisettings width="165" height="100" resizable="false"
+				border="" background-color="#3355CC" font-color="#000000" linewidth="5px"
+				linecolor="#3355CC" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="30" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+	</elements>
+</ontology>

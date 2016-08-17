@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ontology type="Belvedere">
+	<elements>
+		<element elementid="data" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Data" />
+			<uisettings width="180" height="250" resizable="true"
+				border="standard" background-color="#c4ffc4" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="notes" elementtype="text" quantity="0"
+					minquantity="1" maxquantity="1">
+					<elementoptions label="Notes" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" detailsonly="true"/>
+				</element>
+				<element elementid="url" elementtype="url" quantity="0"
+					minquantity="0" maxquantity="1">
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" detailsonly="true"/>
+				</element>
+				<element elementid="strength" elementtype="rating" quantity="1"
+					minquantity="0" maxquantity="1">
+					<elementoptions label="Strength" score="0" minscore="-10"
+						maxscore="10" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" detailsonly="true"/>
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" detailsonly="true"/>
+				</element>
+			</childelements>
+		</element>
+		<element elementid="hypothesis" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Hypothesis" />
+			<uisettings width="180" height="250" resizable="true"
+				border="round" background-color="#FF8080" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="notes" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions label="Notes" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="url" elementtype="url" quantity="0"
+					minquantity="0" maxquantity="1">
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="strength" elementtype="rating" quantity="1"
+					minquantity="0" maxquantity="1">
+					<elementoptions label="Strength" score="0" minscore="-10"
+						maxscore="10" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="unspecified" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Unspecified" />
+			<uisettings width="180" height="250" resizable="true"
+				border="dashed" background-color="#E6E6E6" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" maxheight="150"/>
+				</element>
+				<element elementid="notes" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions label="Notes" text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" maxheight="100"/>
+				</element>
+				<element elementid="url" elementtype="url" quantity="0"
+					minquantity="0" maxquantity="1">
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="strength" elementtype="rating" quantity="1"
+					minquantity="0" maxquantity="1">
+					<elementoptions label="Strength" score="0" minscore="-10"
+						maxscore="10" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="for" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="For" endings="true" />
+			<uisettings width="140" height="120" resizable="false"
+				border="" background-color="#5FC977" font-color="#000000" linewidth="2px"
+				linecolor="#5FC977" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="strength" elementtype="rating" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions score="0" minscore="-10" maxscore="10" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="against" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Against" endings="true" />
+			<uisettings width="140" height="120" resizable="false"
+				border="" background-color="#FF7979" font-color="#000000" linewidth="2px"
+				linecolor="#FF7979" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="strength" elementtype="rating" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions score="0" minscore="-10" maxscore="10" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+		<element elementid="unspecified" elementtype="relation"
+			quantity="" minquantity="" maxquantity="">
+			<elementoptions heading="Unspecified" endings="true" />
+			<uisettings width="140" height="120" resizable="false"
+				border="" background-color="#0E63FF" font-color="#000000" linewidth="2px"
+				linecolor="#0E63FF" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="40" />
+				</element>
+				<element elementid="strength" elementtype="rating" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions score="0" minscore="-10" maxscore="10" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+				<element elementid="awareness" elementtype="awareness"
+					quantity="1" minquantity="1" maxquantity="1">
+					<elementoptions text="" />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="15" maxheight="15" />
+				</element>
+			</childelements>
+		</element>
+	</elements>
+</ontology>

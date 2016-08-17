@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ontology type="Modified-Beardsley-Freeman-Model">
+    <elements>
+        <element elementtype="box" elementid="Premise" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Premise" canbegrouped="true"/>
+            <uisettings width="200" height="200" border="standard" background-color="#FFCC00"/>
+            <childelements>
+                <element elementtype="text" elementid="Premise-text" minquantity="1" maxquantity="1" quantity="1">
+                    <elementoptions/>
+                    <uisettings minheight="42"/>
+                    <childelements/>
+                </element>
+                <element elementtype="awareness" elementid="author" minquantity="1" maxquantity="1" quantity="1">
+                    <elementoptions/>
+                    <uisettings minheight="16" maxheight="16"/>
+                    <childelements/>
+                </element>
+            </childelements>
+        </element>
+        <element elementtype="box" elementid="Conclusion" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Conclusion"/>
+            <uisettings width="200" height="200" border="standard" background-color="#99CCFF"/>
+            <childelements>
+                <element elementtype="text" elementid="Conclusion-text" minquantity="1" maxquantity="1" quantity="1">
+                    <elementoptions/>
+                    <uisettings minheight="42"/>
+                    <childelements/>
+                </element>
+                <element elementtype="awareness" elementid="author" minquantity="1" maxquantity="1" quantity="1">
+                    <elementoptions/>
+                    <uisettings minheight="16" maxheight="16"/>
+                    <childelements/>
+                </element>
+            </childelements>
+        </element>
+        <element elementtype="box" elementid="Refutation" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Refutation"/>
+            <uisettings width="200" height="200" border="standard" background-color="red"/>
+            <childelements>
+                <element elementtype="text" elementid="Refutation-text" minquantity="1" maxquantity="1" quantity="1">
+                    <elementoptions/>
+                    <uisettings minheight="42"/>
+                    <childelements/>
+                </element>
+                <element elementtype="awareness" elementid="author" minquantity="1" maxquantity="1" quantity="1">
+                    <elementoptions/>
+                    <uisettings minheight="16" maxheight="16"/>
+                    <childelements/>
+                </element>
+            </childelements>
+        </element>
+        <element elementtype="box" elementid="Instructor-Comment" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Instructor-Comment"/>
+            <uisettings width="200" height="200" border="standard" background-color="yellow"/>
+            <childelements>
+                <element elementtype="text" elementid="Instructor-Comment-text" minquantity="1" maxquantity="1" quantity="1">
+                <elementoptions/>
+                <uisettings minheight="42"/>
+                <childelements/>
+                </element>
+            <element elementtype="awareness" elementid="author" minquantity="1" maxquantity="1" quantity="1">
+                <elementoptions/>
+                <uisettings minheight="16" maxheight="16"/>
+                <childelements/>
+            </element>
+            </childelements>
+        </element>
+        <element elementtype="relation" elementid="Support" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Support" endings="true" details="false"/>
+            <uisettings width="120" height="200" background-color="green" linewidth="4px" linecolor="green"/>
+            <childelements/>
+        </element>
+        <element elementtype="relation" elementid="Objection" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Objection" endings="true" details="false"/>
+            <uisettings width="120" height="200" background-color="red" linewidth="4px" linecolor="red"/>
+            <childelements/>
+        </element>
+        <element elementtype="relation" elementid="Linked Connection" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Linked Connection" endings="false" details="false" connectsgroup="true"/>
+            <uisettings width="120" height="200" background-color="blue" linewidth="6px" linecolor="blue"/>
+            <childelements/>
+        </element>
+        <element elementtype="relation" elementid="Instructor-Pointer" minquantity="0" maxquantity="0" quantity="0">
+            <elementoptions heading="Instructor-Pointer" endings="true" details="false"/>
+            <uisettings width="120" height="200" background-color="#000000" linewidth="4px" linecolor="#000000"/>
+            <childelements/>
+        </element>
+    </elements>
+</ontology>

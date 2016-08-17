@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ontology type="Allgemeine Argumentation (Einzelnutzer)">
+	<elements>
+		<element elementid="node" elementtype="box" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Beitrag" />
+			<uisettings width="170" height="150" resizable="true"
+				border="round" background-color="#FFD800" font-color="#000000" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="1"
+					minquantity="1" maxquantity="1">
+					<elementoptions />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="28" />
+				</element>
+				<element elementid="dropdown" elementtype="dropdown" quantity="1"
+ 					minquantity="1" maxquantity="1">
+ 					<elementoptions label="Korrekt?" options="Ja,Nein" selectedoption="Ja" />
+ 					<uisettings minheight="22" maxheight="22"/>
+ 				</element>
+			</childelements>
+		</element>
+
+		<element elementid="undefinedlink" elementtype="relation"
+			quantity="" minquantity="" maxquantity="">
+			<elementoptions heading="Undefiniert" endings="false" />
+			<uisettings width="133" height="100" resizable="false"
+				border="" background-color="#E6E6E6" font-color="#000000" linewidth="2px"
+				linecolor="#E6E6E6" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="28" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="prolink" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Pro" endings="true" />
+			<uisettings width="112" height="100" resizable="false"
+				border="" background-color="#5FC977" font-color="#000000" linewidth="2px"
+				linecolor="#5FC977" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="28" />
+				</element>
+			</childelements>
+		</element>
+
+		<element elementid="conlink" elementtype="relation" quantity=""
+			minquantity="" maxquantity="">
+			<elementoptions heading="Kontra" endings="true" />
+			<uisettings width="112" height="100" resizable="false"
+				border="" background-color="#FF7979" font-color="#000000" linewidth="2px"
+				linecolor="#FF7979" />
+			<childelements>
+				<element elementid="text" elementtype="text" quantity="0"
+					minquantity="0" maxquantity="1">
+					<elementoptions />
+					<uisettings background-color="#FFFFFF" font-color="#000000"
+						minheight="28" />
+				</element>
+			</childelements>
+		</element>
+
+	</elements>
+</ontology>

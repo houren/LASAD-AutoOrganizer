@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maptemplate uniquename="toulmin_multiuser" ontology="Toulmin (Multi user)" title="Toulmin Argumentation Scheme">
+					<mapdetails>
+						<description>
+						</description>
+						<options maxuser="10" chatsystem="true" listofusers="true" feedback="false" track-cursor="true" group-pointer="true" allowlinkstolinks="true"/>
+					</mapdetails>
+						
+				</maptemplate>

@@ -1,0 +1,8 @@
+File Name: DS_logging.zip
+Version: 9.0.3
+Release Date: September 2, 2015
+Package Date: September 2, 2015
+
+Carnegie Mellon University, Human-Computer Interaction Institute.
+Copyright 2015.
+All Rights Reserved.

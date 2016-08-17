@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/LASAD-Shared"/>
+	<classpathentry exported="true" kind="lib" path="lib/jdom.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xmppbridge.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/kevin/LASAD-CMU/Develop/DS_logging/dist/datashop-logging.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/kevin/LASAD-CMU/Develop/DS_logging/extlib/commons-lang-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/kevin/LASAD-CMU/Develop/DS_logging/extlib/log4j-1.2.13.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Users/kevin/LASAD-CMU/Develop/DS_logging/extlib/logclient.jar"/>
+	<classpathentry exported="true" kind="lib" path="/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

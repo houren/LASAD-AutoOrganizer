@@ -1,0 +1,272 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<link rel=File-List href="Logging%20API%20Readme_files/filelist.xml">
+<title>DataShop - Logging Package</title>
+<style type="text/css">
+.contents {list-style:none;padding-left:0; font-family:Arial;sans-serif}
+.contents ul {list-style:inherit;padding-left:1em}
+h1,h2,h3,h4 {font-family:Arial,sans-serif;font-weight:normal}
+p.indent {padding-left:.5in}
+a.top {font-size:8pt; font-family:Arial,sans-serif; padding-left:10px}
+table {padding-left:1em}
+</style>
+</head>
+ 
+<body>
+
+<h1>DataShop - Logging Package</h1>
+
+<span id="top"></span>
+<p><em>Table of Contents</em></p>
+<ul class="contents">
+	<li><a href="#introduction">1. Introduction</a></li>
+	<li><a href="#organization">2. Package Organization</a></li>
+	<li><a href="#loggers">3. Loggers included in this API</a>
+	    <ul>
+	        <li><a href="#filelogger">3.1 FileLogger</a></li>
+	        <li><a href="#disklogger">3.2 OLI DiskLogger</a></li>
+	        <li><a href="#dblogger">3.2 OLI DatabaseLogger</a></li>
+	    </ul>
+	</li>   
+	<li><a href="#how">4. How to Log</a></li>
+	<li><a href="#classes">5. Classes</a></li>
+	    <ul>
+		<li><a href="#filelogger_class">5.1 File Logger</a></li>
+		<li><a href="#context_msg_class">5.2 Context Message</a></li>
+		<li><a href="#tool_msg_class">5.3 Tool Message</a></li>
+		<li><a href="#tutor_msg_class">5.4 Tutor Message</a></li>
+	    </ul>
+	</li>
+	<li><a href="#version">6. Version Information</a></li>
+	<li><a href="#sample">7. Code Sample</a></li>
+	
+</ul>
+
+	<h2 id="introduction">1. Introduction <a class="top" href="#top">[top]</a></h2>
+
+	   <p>The Tutor Logging API, provided by the DataShop, is a Java
+	      package intended to make the logging of tutor messages easier for anyone developing a
+	      tool, tutor, or authoring tool using Java. This API follows the <a href="dtd/tutor_message_v4.xsd">
+	      tutor_message_v4.xsd</a> schema which is detailed in the 
+	      <a href="dtd/tutor_message_dtd_guide_v4.pdf">Guide to the Tutor Message Format</a>. This guide serves as a single
+	      resource for all information regarding the Tutor Message Format, including element and attribute descriptions,
+	      diagrams, code examples as well as DataShop XML processing expectations.  You may also find the <a
+	      href="dtd/tutor_message_v4.xml">sample XML</a> file another useful reference.</p>
+	
+	   <p>In this document the word <strong>tool</strong> refers to the
+	      front-end, user interface.  Tool
+	      messages should be logged when the student makes an action. Tool messages should also be used 
+	      for media events. The word <strong>tutor</strong> refers to the backend system, e.g. the
+	      tutor, which logs whether an answer is correct, incorrect or provides
+	      hints.  Tutor messages are logged when
+	      the system responds to the student’s action.</p>
+
+	   <p>The API conforms to Version 4 of the Tutor Message Format.</p>
+
+	<h2 id="organization">2. Package Organization <a class="top" href="#top">[top]</a></h2>
+		<p>The DataShop Logging package is organized in the following manner:</p>
+	         <table>
+		      <tr>
+		         <td><code>api/</code>:</td>
+		         <td><a href="api/index.html">Javadocs</a> for the Logging package.</td>
+		      </tr>
+		      <tr>
+		         <td><code>dist/</code>:</td>
+		         <td>Contains the datashop-logging.jar file.</td>
+		      </tr>
+		      <tr>
+		         <td><code>example/</code>:</td>
+		         <td>Example logging file (Sample.java).</td>
+		      </tr>
+		      <tr>
+		         <td><code>extlib/</code>:</td>
+		         <td>Additional required jars.</td>
+		      </tr>
+		      <tr>
+		         <td><code>xml/</code>:</td>
+		         <td>Contains the DataShop XML schema and the Guide to the Tutor Message Format.</td>
+		      </tr>
+		      <tr>
+		         <td><code>/</code>:</td>
+		         <td>readme.html.</td>
+		      </tr>
+		   </table>
+
+
+	<h2 id="loggers">3. Loggers included in this API <a class="top" href="#top">[top]</a></h2>
+		<p>There are three types of loggers provided by this library, the FileLogger, OLIDiskLogger and OLIDatabaseLogger.</p>
+
+		<h3 id="filelogger">3.1 FileLogger</h3>
+
+		<p>The FileLogger is a simple file logger, which creates a well-formed
+		   XML file.  This type of file can easily be read into the DataShop.
+		</p>
+
+		<h3 id="disklogger">3.2 OLI DiskLogger</h2>
+		<p>
+		   The Oli DiskLogger creates a file which can easily be imported into an OLI-style log
+		   database. It is not, however, easily read with the naked eye. 
+		</p>
+
+		<h3 id="dblogger">3.3 OLI DatabaseLogger</h2>
+		<p>The OliDatabaseLogger logs directly to an OLI-style log database. Use this logger with caution, as we don’t
+		want to fill up either test or production databases with a lot of test
+		data. It is recommended that you start first with the FileLogger so that the results can easily be checked for
+		correctness.</p>
+
+	<h2 id="how">4. How to Log <a class="top" href="#top">[top]</a></h2>
+		<p>The general steps are as follows:</p>
+		
+		<ol>
+		 <li>Create a logger.</li>
+		 <li>For each new problem that the student starts, create a ContextMessage and fill
+		     in the details.</li>
+		
+		
+		<p><code>e.g. ContextMessage contextMsg = ContextMessage.</code>
+		<code>createStartProblem (metaElement);</code></p>
+		
+		
+		 <li>Log that message.</li>
+		 <li>The tool (i.e. UI application) should create and log a ToolMessage to capture
+		     what the student actually did.</li>
+		 <li>The tutor (i.e. the backend system) should then log a response using a
+		     TutorMessage, to capture whether the student was right/wrong and what they
+		     should’ve done in case they were wrong.</li>
+		</ol>
+		
+		<p class="indent"><strong>Note:</strong> that with this complete rewrite of the logging library,
+		every effort was made to reduce the size of the logging library itself and
+		reduce the number of dependencies. The logging library no longer depends on the log4j 
+		or jdom jars, but only depends on the OLI logclient.jar. The reduction
+		in size was done primarily to support Java applets.</p>
+		
+		<p>The datashop-logging.jar is 52 k.</p>
+		
+		<p>The logclient.jar is 23 k.</p>
+		
+		<p class="indent"><strong>Note:</strong> If you need a version that does not depend even on the logclient.jar,
+		please contact us. We can easily do that too.</p>
+
+
+	<h2 id="classes">5. Classes <a class="top" href="#top">[top]</a></h2>
+	
+		<p>A subset of classes and methods are outlined below. For detailed information about the classes
+		provided in the datashop-logging.jar, please reference the <a href="api/index.html">Javadoc API</a>.</p>
+		
+		<p>Also see the <a href="#sample">sample application</a> for more details.</p>
+		
+		<h3 id="filelogger_class">5.1 <a href="api/edu/cmu/pslc/logging/FileLogger.html">FileLogger</a></h3>
+		
+		    <h4>Create one logger to log messages across a span of attempts and responses.</h4>
+		
+			<p class="indent"><code>FileLogger fileLogger = FileLogger.create(&quot;MyPlainFile.xml&quot;);</code></p>
+		
+			<p class="indent"><strong>Note:</strong> When logging to files, you may want to produce multiple files,
+			   perhaps a file per student.
+			</p>
+		
+		<h3 id="context_msg_class">5.2 <span><a href="api/edu/cmu/pslc/logging/ContextMessage.html">ContextMessage</a></span></h3>
+		
+			<p>This message is needed to put the problem in context. Logging this information once instead of with every tool and
+			   tutor message saves space.
+			</p>
+		
+			<p class="indent">
+			    <code>String timeString = &quot;2006-08-30 11:22:33&quot;;</code><br />
+			    <code>MetaElement metaElement = new MetaElement(userId, sessionId, timeString, timeZone);</code><br />
+			    <code>ContextMessage contextMsg = ContextMessage.<b style='mso-bidi-font-weight:normal'>createStartProblem</b>(metaElement);></code>
+			</p>
+		
+		
+			<h4>Generating globally unique IDs:</h4>
+		
+			<p>This can be done with the <code>generageGUID</code> method. This will return something like: “JUNK-2c72fcf0:10d8424c05d:-8000”</p>
+		
+			<p style='text-indent:.5in'><code>String sessionId = Message.generateGUID(&quot;JUNK&quot;);</code></p>
+		
+			<h4>The time string can be of the following formats:</h4>
+				<ul>
+					<li><code>yyyy-MM-dd HH:mm:ss.SSS</code></li>
+					<li><code>yyyy-MM-dd HH:mm:ss</code></li>
+					<li><code>yyyy-MM-dd HH:mm</code></li>
+					<li><code>MMMMM dd, yyyy hh:mm:ss a</code></li>
+					<li><code>MM/dd/yy HH:mm:ss:SSS</code></li>
+					<li><code>MM/dd/yy HH:mm:ss</code></li>
+				</ul>
+		
+		
+		<h3 id="tool_msg_class">5.3 <a href="api/edu/cmu/pslc/logging/ToolMessage.html">ToolMessage</a></h3>
+		
+			<h4>Create a tool message for student’s action:</h4>
+		
+			<p class="indent"><code>ToolMessage toolMsg = ToolMessage.create(contextMsg);<br />
+							       toolMsg.setProblemName(problemName);
+			 </code></p>
+		
+			<h4>To log an attempt at a step in the problem:</h4>
+		
+			<p class="indent"><code>toolMsg.setAsAttempt();</code></p>
+		
+			<h4>To log a request for help at a step in the problem:</h4>
+		
+			<p class="indent"><code>toolMsg.setAsHintRequest();</code></p>
+		
+			<h4>To add the Selection, Action and Input to the message, i.e. what the
+			student actually did:</h4>
+		
+			<p class="indent"><code>toolMsg.addSai(&quot;TextBox1&quot;, &quot;EnterText&quot;, &quot;box&quot;);</code></p>
+		
+			<h4>To log this message:</h4>
+		
+			<p class="indent"><code>fileLogger.log(toolMsg);</code></p>
+		
+		<h3 id="tutor_msg_class">5.4 <a href="api/edu/cmu/pslc/logging/TutorMessage.html">TutorMessage</a></h3>
+		
+			<h4>Create a tutor message when responding to the student's action:</h4>
+		
+			<p class="indent"><code>TutorMessage tutorMsg = TutorMessage.create(toolMsg);</code></p>
+		
+			<h4>To log a system response to the student's attempt at a step in a problem:</h4>
+		
+			<p class="indent"><code>tutorMsg.setAsCorrectAttemptResponse();</code></p>
+		
+			<h4>To log a system response to the student's request for a hint:</h4>
+		
+			<p class="indent"><code>tutorMsg.setAsHintResponse();</code></p>
+		
+			<h4>To add the Selection, Action and Input to the message, i.e. what the student should’ve done:</h4>
+		
+			<p class="indent"><code>tutorMsg.addSai(&quot;ButtonOne&quot;, &quot;PressButton&quot;, &quot;square&quot;);</code></p>
+		
+			<h4>To add a skill to the response:</h4>
+		
+			<p class="indent"><code>tutorMsg.addSkill(new SkillElement(&quot;Dictation&quot;, &quot;General&quot;, &quot;Basic&quot;));</code></p>
+		
+			<h4>To log this message:</h4>
+		
+			<p class="indent"><code>fileLogger.log(tutorMsg);</code></p>
+	
+	<h2 id="version">6. Version Information <a class="top" href="#top">[top]</a></h2>
+	
+		<p>To get the version of the jar file, execute a command something like this:</p>
+		<p class="indent"><code>java -classpath "dist/datashop-logging.jar;extlib/log4j-1.2.13.jar" edu.cmu.pslc.datashop.util.VersionInformation</code></p>
+	
+	<h2 id="sample">7. Code Sample <a class="top" href="#top">[top]</a></h2>
+	
+		<p>To run the sample application which produces a log file to
+		the local disk, execute something like this:</p>
+	
+		<p class="indent"><code>java -classpath "dist/datashop-logging.jar;extlib/logclient.jar;extlib/commons-lang-2.2.jar" edu.cmu.pslc.logging.Sample</code><br />
+		</p>
+		<p>
+		Also see the <code><a href="example/Sample.java">Sample.java</a> </code>to see how these classes are used.
+		</p>
+
+</body>
+
+</html>

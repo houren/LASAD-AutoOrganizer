@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maptemplate uniquename="MBF-Model-Template" title="MBF-Model-Template" ontology="Modified-Beardsley-Freeman-Model">
+  <mapdetails>
+    <description>Modified Beardsley-Freeman Model template for Dr. Mara Harrell's class</description>
+    <options maxuser="30" chatsystem="true" listofusers="true" minimap="true" track-cursor="false" selection-details="false" onlyauthorcanmodify="false" committextbyenter="true" straightlink="true" AutoGrowTextArea="true" allowlinkstolinks="false"/>
+  </mapdetails>
+</maptemplate>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maptemplate uniquename="NewFeaturesOntology" ontology="NewFeaturesOntology"
+	title="NewFeaturesOntology">
+	<mapdetails>
+		<description>
+			Enabled configurations: chat system, list of users,
+			group-pointer; cursor-tracking: disabled
+		</description>
+		<options maxuser="20" chatsystem="true" sentenceopener="true"
+			listofusers="true" feedback="true" track-cursor="false"
+			group-pointer="true" onlyauthorcanmodify="true" straightlink="true" allowlinkstolinks="true"/>
+	</mapdetails>
+
+
+	<element elementid="mychatpanel" elementtype="chatpanel">
+
+		<sentenceopeners headertext="Neue Chat" endstring="..."
+			forceselection="false" defaulttext="Wählen Sie einen Satz opener"
+			sendbuttontext="Senden" clearbuttontext="Klar">
+			<sentenceopenercolumn>
+				<sentenceopenercell cellid="1" type="Label" text="Proponent" />
+				<sentenceopenercell cellid="2" type="Button"
+					text="One of the central claims is" backgroundcolor="#A59AE1" />
+				<sentenceopenercell cellid="3" type="Button"
+					text="An argument for this claim is" backgroundcolor="#A29699" />
+				<sentenceopenercell cellid="4" type="Button"
+					text="From this it follows that" backgroundcolor="#71A94B" />
+				<sentenceopenercell cellid="5" type="Button"
+					text="This claim is supported by the fact that" backgroundcolor="#C0F020" />
+				<sentenceopenercell cellid="6" type="Button"
+					text="Do you have questions" backgroundcolor="#BA7F6D" />
+				<sentenceopenercell cellid="7" type="Button"
+					text="Do you agree" backgroundcolor="#C6DFAE" />
+			</sentenceopenercolumn>
+			<sentenceopenercolumn>
+				<sentenceopenercell cellid="8" type="Label" text="Critic" />
+				<sentenceopenercell cellid="9" type="Button"
+					text="An alternative conclusion would be" backgroundcolor="#9BEF82" />
+				<sentenceopenercell cellid="10" type="Button"
+					text="An argument against this claim is" backgroundcolor="#C6DFAE" />
+				<sentenceopenercell cellid="11" type="Button"
+					text="This argument isnt conclusive because" backgroundcolor="#9CE652" />
+				<sentenceopenercell cellid="12" type="Button"
+					text="A hidden assumptions" backgroundcolor="#889BB3" />
+				<sentenceopenercell cellid="13" type="Button"
+					text="Could you explain to me" backgroundcolor="#9BEF82" />
+				<sentenceopenercell cellid="14" type="Button"
+					text="I dont agree because" backgroundcolor="#C99E9E" />
+			</sentenceopenercolumn>
+		</sentenceopeners>
+
+	</element>
+</maptemplate>

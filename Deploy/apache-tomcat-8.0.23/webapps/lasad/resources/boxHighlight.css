@@ -1,0 +1,157 @@
+/* HIGHLIGHT SYSTEM */
+.box-highlight-topLeft {
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	margin-top: 3px;
+	margin-left: 2px;
+	height: 3px;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.box-highlight-topRight {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	margin-top: 3px;
+	margin-right: 2px;
+	height: 3px;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.box-highlight-bottomLeft {
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+	margin-bottom: 3px;
+	margin-left: 2px;
+	height: 3px;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.box-highlight-bottomRight {
+	position: absolute;
+	bottom: 0px;
+	right: 5px;
+	margin-bottom: 3px;
+	margin-right: 2px;
+	height: 3px;
+	background-color: transparent;
+	z-index: 2;
+}
+
+.box-highlight-horLeft_long {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 20px;
+	background-image: url(images/box/highlight_horLeft_long.png);
+	background-repeat: repeat-y;
+}
+
+.box-highlight-horLeft_short {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 3px;
+	background-image: url(images/box/highlight_horLeft_short.png);
+	background-repeat: no-repeat;
+}
+
+.box-highlight-horRight_long {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 20px;
+	background-image: url(images/box/highlight_horRight_long.png);
+	background-repeat: repeat-y;
+}
+
+.box-highlight-horRight_short {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 3px;
+	background-image: url(images/box/highlight_horRight_short.png);
+	background-repeat: no-repeat;
+}
+
+.box_advancedHighlight-style-none {
+	background-color: transparent;
+	background-image: none;
+}
+
+.box_advancedHighlight-style-red {
+	background-color: transparent;
+	background-image: url(images/box/highlight/highlight_red.png);
+	border-color: red;
+}
+
+.box_advancedHighlight-style-blue {
+	background-color: transparent;
+	background-image: url(images/box/highlight/highlight_blue.png);
+}
+
+.box-advancedHighlight-top {
+	position: absolute;
+	bottom: 1px;
+	left: 0px;
+	height: 5px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: top center;
+	z-index: 0;
+	border-bottom: 1px solid;
+}
+
+.box-advancedHighlight-bottom {
+	position: absolute;
+	top: 1px;
+	left: 0px;
+	height: 5px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	z-index: 0;
+	border-top: 1px solid;
+}
+
+.box-advancedHighlight-left {
+	position: absolute;
+	bottom: 0px;
+	right: 1px;
+	height: 100%;
+	width: 5px;
+	background-repeat: no-repeat;
+	background-position: center left;
+	z-index: 0;
+	border-right: 1px solid;
+}
+
+.box-advancedHighlight-right {
+	position: absolute;
+	bottom: 0px;
+	left: 1px;
+	height: 100%;
+	width: 5px;
+	background-repeat: no-repeat;
+	background-position: center right;
+	z-index: 0;
+	border-left: 1px solid;
+}
+
+.border-highlighted {
+	background: #FF0000;
+}
+
+.border-highlighted-color {
+	/* Color set manually via DOM */
+	
+}

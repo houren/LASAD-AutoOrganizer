@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maptemplate uniquename="belvedere" ontology="Belvedere" title="Belvedere Emulation">
+
+				<mapdetails>
+					<description>
+						Emulation of the Belvedere system by Dan Suthers
+					</description>
+					<options maxuser="10" chatsystem="false" listofusers="false" feedback="false" track-cursor="false" selection-details="true" allowlinkstolinks="true"/>
+				</mapdetails>
+					
+</maptemplate>

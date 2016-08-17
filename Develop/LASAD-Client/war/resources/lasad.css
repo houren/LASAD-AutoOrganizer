@@ -1,0 +1,260 @@
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #000000 !important;
+	height: 100%;
+}
+
+.instruction-text {
+	padding: 3px;
+	font-size: 11px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+.userlist {
+	font-size: 11px;
+	font-family: tahoma, arial, helvetica, sans-serif;
+	background-color: #E1E9F2;
+}
+
+/** Awareness **/
+.awareness_cursor_root {
+	float: left;
+	background-image: url(images/awareness/transparent.png) !important;
+	background-repeat: repeat;
+}
+
+.awareness_cursor_text {
+	font-size: 10px;
+	background-image: url(images/awareness/transparent.png) !important;
+	background-repeat: repeat;
+	color: #AAAAAA;
+	padding-left: 14px;
+	border-bottom: 1pt solid lightgrey;
+}
+
+.awareness_cursor_icon {
+	background-image: url(images/awareness/cursor.png) !important;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 12px;
+	height: 21px;
+}
+
+.awareness_groupcursor_icon {
+	background-image: url(images/awareness/crosshair.png) !important;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 42px;
+	height: 42px;
+}
+
+.awareness_groupcursor_text {
+	font-size: 10px;
+	background-image: url(images/awareness/transparent.png) !important;
+	background-repeat: repeat;
+	color: #AAAAAA;
+	padding-left: 44px;
+}
+
+/** Feedback Visualization **/
+.feedback_cluster_icon {
+	background-image: url(images/feedback/red-star.png) !important;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+}
+
+.feedback-root {
+	width: 200px;
+	background-color: white;
+	border: 1pt solid lightgrey;
+}
+
+.feedbackText-div {
+	float: left;
+	padding: 2px;
+	border: 1pt solid #000000;
+}
+
+/** Link **/
+.link_highlight_border {
+	border: #FF0000 solid 1px !important;
+}
+
+.link_header {
+	font-size: 10px;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	line-height: 11px;
+}
+
+.link_header_active {
+	font-size: 10px;
+	padding-top: 2px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	line-height: 14px;
+}
+
+.link_content_text {
+	font-size: 10px;
+	padding-top: 2px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	color: black;
+}
+
+.link_content_principle_text {
+	font-size: 9px;
+	padding-top: 1px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	color: black;
+	text-align: left;
+}
+
+.link_delete_button {
+	background-image: url(images/common/close.gif) !important;
+	opacity: 0.6;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 11px;
+	cursor: pointer;
+}
+
+/** Spots **/
+.mySpot_red {
+	background-image: url(images/spots/red.png) !important;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 11px;
+}
+
+.mySpot_red {
+	background-image: url(images/spots/red.png) !important;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 11px;
+}
+
+.mySpot_yellow {
+	background-image: url(images/spots/yellow.png) !important;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 11px;
+}
+
+.mySpot_green {
+	background-image: url(images/spots/green.png) !important;
+	background-repeat: no-repeat;
+	width: 11px;
+	height: 11px;
+}
+
+/** Score **/
+.myButton_plus {
+	background-image: url(images/elements/plus.gif) !important;
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.myButton_minus {
+	background-image: url(images/elements/minus.gif) !important;
+	background-repeat: no-repeat;
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.line-textarea {
+	padding-top: 0px !important;
+	line-height: 12px;
+	font-size: 10px;
+}
+
+.button-white {
+	background-color: white !important;
+	text-align: left;
+}
+
+.popup {
+	background-color: gray;
+	border-color: gray gray gray gray;
+	border-width: 1px 1px 1px 1px;
+	border-style: solid solid solid solid;
+}
+
+.popup-item {
+	font-weight: normal;
+	font-size: 70%;
+	color: black;
+	background-color: white;
+}
+
+.popup .gwt-MenuItem-selected {
+	background-color: #C0C0C0;
+	color: black;
+}
+
+.plain_text_area_view_mode {
+	font-size: 80%;
+}
+
+.lbl_transcript_line_view_mode {
+	font-size: 70%;
+	color: black;
+	padding-left: 2px;
+	scrolling: auto;
+}
+
+.web_link {
+	font-size: 70%;
+	color: black;
+	padding-left: 2px;
+}
+
+/* LOGIN TAB RELATED STUFF */
+.loginTab_MapInfoPanel div {
+	padding: 10px;
+	color: #000000 !important;
+}
+
+.loginTab_MapInfoPanel table {
+	color: #000000 !important;
+	width: 100%;
+}
+
+.loginTab_MapInfoPanel tr {
+	color: #000000 !important;
+	margin-top: 10px !important;
+	background-color: #FFFFFF;
+}
+
+.loginTab_MapInfoPanel td {
+	font-size: 9pt;
+	color: #000000 !important;
+	padding: 2px;
+	vertical-align: top;
+}
+
+.loginTab_MapInfoPanel_header {
+	width: 120px;
+	color: #000000 !important;
+	font-weight: bold !important;
+	padding: 2px;
+	padding-left: 10px ! important;
+	vertical-align: top;
+}
